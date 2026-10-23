@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f7f1">
+<meta name="description" content="PRIXO compare les relevés de prix disponibles pour votre panier de courses.">
+<title>PRIXO — Comparateur de courses</title>
+<style>
+:root{--bg:#f6f7f1;--paper:#fff;--ink:#1e2922;--muted:#7b857b;--green:#174d35;--lime:#d8f27d;--soft:#eef3e6;--line:#e7ebe2;--red:#b4483b;--shadow:0 12px 35px #1839220b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:2px solid #759a49;outline-offset:3px}.app{max-width:1250px;margin:auto;padding:0 24px 40px}header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:16px}.brand{display:flex;align-items:center;gap:10px;font-size:22px;letter-spacing:-1px;font-weight:950}.brand-icon{height:38px;width:38px;border-radius:13px;background:var(--green);color:var(--lime);display:grid;place-items:center;font-size:22px}.brand-name span{color:var(--green)}.head-actions{display:flex;align-items:center;gap:8px}.head-btn{background:white;border:1px solid var(--line);border-radius:12px;padding:11px 13px;color:var(--ink);font-size:12px;font-weight:800}.hero{padding:33px 0 24px;display:flex;justify-content:space-between;align-items:end;gap:20px}.eyebrow{color:var(--green);font-size:10px;text-transform:uppercase;letter-spacing:1.9px;font-weight:900}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.03;letter-spacing:-2.5px;margin:12px 0;font-weight:950}.hero h1 em{color:var(--green);font-style:normal}.hero p{max-width:540px;font-size:13px;line-height:1.75;color:var(--muted);margin:0}.live-box{min-width:180px;background:var(--lime);border-radius:17px;padding:14px 17px}.live-box small{display:block;color:#4e5d37;font-size:9px;font-weight:900;letter-spacing:1px}.live-box strong{display:block;font-size:23px;margin-top:5px;letter-spacing:-.7px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:20px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:21px;padding:20px;box-shadow:var(--shadow);min-width:0}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:15px}.panel-head h2{font-size:17px;letter-spacing:-.5px;margin:0}.muted{color:var(--muted)}.small{font-size:10px}.count{background:var(--soft);color:var(--green);padding:6px 8px;border-radius:8px;font-size:10px;font-weight:900;white-space:nowrap}.search-row{display:flex;gap:9px}.search-wrap{position:relative;flex:1;min-width:0}.search-wrap input{height:48px;width:100%;padding:0 13px 0 39px;border:1px solid var(--line);border-radius:13px;background:#f9faf6;outline:none;color:var(--ink)}.search-wrap input:focus{border-color:#9db88b}.search-icon{position:absolute;top:14px;left:14px;color:var(--muted)}.btn{border:0;border-radius:13px;min-height:45px;padding:0 15px;font-size:12px;font-weight:850}.primary{background:var(--green);color:white}.primary:hover{background:#103e29}.secondary{background:white;border:1px solid var(--line);color:var(--green)}.suggestions{display:flex;gap:7px;overflow:auto;scrollbar-width:none;margin:12px 0 18px;padding-bottom:2px}.suggestions button{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:24px;padding:8px 11px;font-size:10px;font-weight:750;color:#5c685d}.suggestions button:hover{border-color:var(--green);color:var(--green)}.status{display:none;margin:12px 0;padding:10px 12px;border-radius:11px;background:#f3f5ed;color:#5b665a;font-size:11px;line-height:1.55;overflow-wrap:anywhere}.status.show{display:block}.status.error{background:#fff0ed;color:var(--red)}.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.product{border:1px solid var(--line);border-radius:15px;overflow:hidden;min-width:0;display:flex;flex-direction:column}.product-image{height:116px;background:#f3f5ee;display:grid;place-items:center;padding:8px;position:relative}.product-image img{height:100%;width:100%;object-fit:contain}.product-placeholder{font-size:43px}.brand-tag{position:absolute;left:8px;top:8px;background:#ffffffdf;border-radius:6px;font-size:8px;font-weight:850;padding:5px 6px;max-width:85%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.product-body{padding:10px;display:flex;flex:1;flex-direction:column}.product-name{font-size:12px;font-weight:850;line-height:1.4;min-height:34px;overflow-wrap:anywhere}.product-detail{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.5}.product-foot{margin-top:auto;padding-top:10px;display:flex;align-items:center;justify-content:space-between;gap:6px}.product-price{font-size:10px;color:var(--muted);line-height:1.4}.add{width:31px;height:31px;border:0;border-radius:10px;background:var(--lime);color:var(--green);font-size:20px;font-weight:900;flex-shrink:0}.add:hover{background:#c9e965}.empty{grid-column:1/-1;text-align:center;padding:28px 12px;color:var(--muted);font-size:12px;line-height:1.7}.fineprint{font-size:10px;line-height:1.65;color:var(--muted);margin:16px 0 0}.basket-panel{position:sticky;top:15px}.basket-title{display:flex;align-items:center;gap:9px}.clear-btn{border:0;background:transparent;text-decoration:underline;font-size:11px;color:var(--muted)}.basket-empty{text-align:center;color:var(--muted);padding:22px 8px}.basket-empty .emoji{font-size:38px;margin-bottom:8px}.basket-empty strong{display:block;color:var(--ink);font-size:13px;margin-bottom:6px}.basket-empty p{font-size:11px;line-height:1.65;margin:0}.basket-item{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:9px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.basket-emoji{height:38px;width:38px;border-radius:11px;background:#f2f5ec;display:grid;place-items:center;font-size:20px}.basket-name{font-size:11px;font-weight:850;line-height:1.45;overflow-wrap:anywhere}.basket-meta{font-size:10px;color:var(--muted);margin-top:3px}.qty{display:flex;align-items:center;gap:8px;margin-top:7px}.qty button{height:23px;width:24px;border:1px solid var(--line);background:white;border-radius:7px;font-weight:850}.qty span{font-size:11px;font-weight:850;min-width:10px;text-align:center}.basket-line-price{font-size:11px;font-weight:900;text-align:right;white-space:nowrap}.summary{border-top:1px solid var(--line);margin-top:14px;padding-top:14px}.sum-row{display:flex;align-items:center;justify-content:space-between;margin:9px 0;gap:10px;font-size:11px;color:var(--muted)}.sum-row strong{color:var(--ink);font-size:12px}.sum-total{display:flex;justify-content:space-between;align-items:end;margin:17px 0}.sum-total span{font-size:12px;font-weight:850}.sum-total strong{font-size:27px;letter-spacing:-.9px}.full{width:100%;min-height:49px}.saved{width:100%;margin-top:9px;min-height:42px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--green);font-size:11px;font-weight:800}.compare-panel{margin-top:18px}.compare-description{font-size:11px;line-height:1.65;color:var(--muted);margin:-4px 0 14px}.store-card{padding:13px;border:1px solid var(--line);border-radius:14px;margin:9px 0}.store-top{display:flex;align-items:start;gap:9px}.store-icon{height:36px;width:36px;border-radius:10px;background:#f1f4e9;display:grid;place-items:center;font-size:17px;flex-shrink:0}.store-middle{flex:1;min-width:0}.store-name{font-size:12px;font-weight:900;overflow-wrap:anywhere}.store-detail{font-size:10px;color:var(--muted);line-height:1.6;margin-top:4px;overflow-wrap:anywhere}.store-total{text-align:right;font-size:15px;font-weight:900;white-space:nowrap}.store-total small{display:block;margin-top:4px;color:var(--muted);font-size:9px;font-weight:650}.store-bar{height:5px;border-radius:20px;background:#edf0e7;overflow:hidden;margin:12px 0 7px}.store-bar div{height:100%;background:#83a86a;border-radius:20px}.store-footer{display:flex;justify-content:space-between;gap:8px;font-size:10px;color:var(--muted)}.best-label{display:inline-block;background:var(--lime);color:var(--green);border-radius:5px;padding:4px 6px;font-size:8px;font-weight:900;margin-top:6px}.data-link{color:var(--green);font-size:10px;font-weight:800}.attribution{font-size:10px;color:var(--muted);line-height:1.65;margin-top:15px}.attribution a{color:var(--green)}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#173e2c;color:white;padding:12px 18px;border-radius:12px;font-size:12px;font-weight:800;z-index:1000;transition:.2s;max-width:calc(100% - 24px);text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.spinner{width:14px;height:14px;border:2px solid #dce7d8;border-top-color:var(--green);border-radius:50%;display:inline-block;animation:spin .7s linear infinite;vertical-align:middle;margin-right:6px}@keyframes spin{to{transform:rotate(360deg)}}.footer{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:9px;padding:20px 2px 0;line-height:1.6}.footer a{color:var(--muted)}
+@media(max-width:870px){.app{padding:0 15px 30px}.layout{grid-template-columns:1fr}.basket-panel{position:static}.products{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{align-items:start}}
+@media(max-width:540px){.app{padding:0 11px 25px}header{height:68px}.brand{font-size:20px}.head-btn{padding:10px 9px;font-size:10px}.hero{padding:26px 0 20px;display:block}.hero h1{font-size:39px;letter-spacing:-2px}.hero p{font-size:12px}.live-box{display:inline-block;margin-top:15px;min-width:0;padding:10px 14px}.live-box strong{font-size:20px}.panel{padding:13px;border-radius:17px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.product-image{height:105px}.product-name{font-size:11px}.search-row{gap:7px}.btn{padding:0 11px}.store-total{font-size:13px}.footer{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div class="brand"><div class="brand-icon">P</div><div class="brand-name">PRI<span>XO</span></div></div>
+  <div class="head-actions"><button class="head-btn" id="locationBtn">⌖ Autour de moi</button><button class="head-btn" id="refreshBtn">↻ Actualiser</button></div>
+</header>
+<section class="hero">
+  <div><div class="eyebrow">Le comparateur de courses</div><h1>Faites vos courses.<br><em>Pas vos économies.</em></h1><p>Recherchez vos produits, composez votre panier et comparez les prix réellement relevés dans les sources disponibles.</p></div>
+  <div class="live-box"><small>PRODUITS EN PANIER</small><strong id="heroCount">0 article</strong></div>
+</section>
+<div class="layout">
+<main>
+  <section class="panel">
+    <div class="panel-head"><h2>Rechercher des produits</h2><span class="count" id="catalogCount">Base ouverte</span></div>
+    <form id="searchForm" class="search-row"><div class="search-wrap"><span class="search-icon">⌕</span><input id="search" type="search" autocomplete="off" placeholder="Ex. lait demi-écrémé, pâtes, Nutella…" required></div><button id="searchBtn" class="btn primary" type="submit">Rechercher</button></form>
+    <div class="suggestions" id="suggestions"><button data-query="lait demi écrémé">🥛 Lait</button><button data-query="pâtes">🍝 Pâtes</button><button data-query="riz">🍚 Riz</button><button data-query="yaourt nature">🥣 Yaourts</button><button data-query="café moulu">☕ Café</button><button data-query="huile olive">🫒 Huile d'olive</button><button data-query="lessive">🫧 Lessive</button><button data-query="bananes">🍌 Bananes</button></div>
+    <div class="status" id="status" role="status" aria-live="polite"></div>
+    <div class="products" id="products"><div class="empty">Recherchez un produit pour interroger le catalogue ouvert Open Food Facts.<br>Vous pourrez ensuite ajouter les résultats au panier.</div></div>
+    <p class="fineprint">Catalogue produit fourni par Open Food Facts. Les prix ne proviennent pas d'Open Food Facts : ils sont recherchés séparément dans Open Prices. Les résultats dépendent de la disponibilité de relevés pour chaque code-barres.</p>
+  </section>
+  <section class="panel compare-panel" id="comparisonPanel">
+    <div class="panel-head"><h2>Comparaison des magasins</h2><span class="count">RELEVÉS RÉELS</span></div>
+    <p class="compare-description" id="compareDescription">Ajoutez des produits au panier, puis lancez la comparaison. Nous rechercherons les relevés de prix disponibles dans Open Prices. Les enseignes affichées dépendront des données disponibles.</p>
+    <div id="stores"><div class="empty">Aucune comparaison lancée.</div></div>
+    <p class="attribution">Sources ouvertes : <a href="https://world.openfoodfacts.org/" target="_blank" rel="noopener">Open Food Facts</a> (produits) et <a href="https://prices.openfoodfacts.org/" target="_blank" rel="noopener">Open Prices</a> (relevés de prix). Les données de prix sont contributives : elles ne couvrent pas tous les produits et toutes les enseignes et ne sont pas nécessairement à jour.</p>
+  </section>
+</main>
+<aside>
+  <section class="panel basket-panel">
+    <div class="panel-head"><div style="display:flex;align-items:center;gap:8px"><h2>Mon panier</h2><span class="count" id="basketCount">0 article</span></div><button class="clear-btn" id="clearBasket">Vider</button></div>
+    <div id="basketItems"></div>
+    <div class="summary"><div class="sum-row"><span>Articles ajoutés</span><strong id="basketSubtotal">0,00 €</strong></div><div class="sum-row"><span>Meilleur panier complet trouvé</span><strong id="bestTotal">—</strong></div><div class="sum-total"><span>Budget estimé</span><strong id="basketTotal">0,00 €</strong></div><button class="btn primary full" id="compareBtn">Comparer les prix →</button><button class="saved" id="saveBasket">✓ Sauvegarde sur cet appareil</button></div>
+    <p class="fineprint">Votre panier est sauvegardé dans le navigateur de cet appareil. Il ne se synchronise pas encore entre plusieurs téléphones.</p>
+  </section>
+  <section class="panel" style="margin-top:15px"><div class="eyebrow">La transparence avant tout</div><h2 style="font-size:19px;letter-spacing:-.6px;margin:9px 0">Pas de prix inventés.</h2><p class="muted" style="font-size:12px;line-height:1.7;margin:0">Si aucun prix récent n'est disponible pour un produit ou un magasin, PRIXO le signalera au lieu d'afficher un chiffre fictif.</p></section>
+</aside>
+</div>
+<footer class="footer"><span>PRIXO · PROTOTYPE WEB</span><span>Les relevés publics ne sont pas une garantie de prix en rayon. Vérifiez les tarifs et disponibilités auprès du magasin.</span></footer>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+"use strict";
+const OFF_SEARCH="https://world.openfoodfacts.org/cgi/search.pl";
+const PRICES_API="https://prices.openfoodfacts.org/api/v1/prices";
+const RECENT_DAYS=180;
+const $=id=>document.getElementById(id);
+let results=[];
+let basket={};
+let userLocation=null;
+let productPrices={};
+let toastTimer=null;
+
+try{
+  const saved=JSON.parse(localStorage.getItem("prixo-live-basket")||"{}");
+  if(saved&&typeof saved==="object"&&!Array.isArray(saved))basket=saved;
+}catch(e){basket={};}
+
+function esc(v){
+  return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+function money(v){
+  return Number.isFinite(Number(v))?Number(v).toLocaleString("fr-FR",{style:"currency",currency:"EUR"}):"—";
+}
+function dateLabel(value){
+  if(!value)return"Date inconnue";
+  const d=new Date(value);
+  return Number.isNaN(d.getTime())?String(value):d.toLocaleDateString("fr-FR",{day:"2-digit",month:"short",year:"numeric"});
+}
+function agoDays(value){
+  if(!value)return Infinity;
+  const d=new Date(value);
+  if(Number.isNaN(d.getTime()))return Infinity;
+  return (Date.now()-d.getTime())/86400000;
+}
+function showStatus(text,type=""){
+  const el=$("status");
+  el.textContent=text;
+  el.className="status show"+(type==="error"?" error":"");
+}
+function clearStatus(){
+  $("status").className="status";
+  $("status").textContent="";
+}
+function toast(text){
+  const el=$("toast");
+  el.textContent=text;
+  el.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>el.classList.remove("show"),2400);
+}
+function saveBasket(){
+  try{localStorage.setItem("prixo-live-basket",JSON.stringify(basket));}
+  catch(e){toast("La sauvegarde locale est indisponible.");}
+}
+function basketItems(){
+  return Object.entries(basket)
+    .map(([code,x])=>({code,item:x.product,qty:x.qty}))
+    .filter(x=>x.item&&x.qty>0);
+}
+function totalQty(){
+  return basketItems().reduce((s,x)=>s+x.qty,0);
+}
+function productCount(){
+  return basketItems().length;
+}
+function cleanProduct(p){
+  return {
+    code:String(p.code||"").trim(),
+    name:String(p.product_name_fr||p.product_name||"Produit sans nom").trim(),
+    brand:String(p.brands||"").split(",")[0].trim(),
+    quantity:String(p.quantity||"").trim(),
+    image:(/^https:\/\//i.test(p.image_front_small_url||"")?p.image_front_small_url:""),
+    categories:Array.isArray(p.categories_tags)?p.categories_tags.slice(0,3):[]
+  };
+}
+function productCard(p){
+  const img=p.image
+    ?`<img src="${esc(p.image)}" alt="" loading="lazy" onerror="this.remove()">`
+    :`<span class="product-placeholder">🛒</span>`;
+  return `<article class="product">
+    <div class="product-image">
+      ${p.brand?`<span class="brand-tag">${esc(p.brand)}</span>`:""}
+      ${img}
+    </div>
+    <div class="product-body">
+      <div class="product-name">${esc(p.name)}</div>
+      <div class="product-detail">${esc(p.quantity||"Format non renseigné")}${p.code?` · ${esc(p.code)}`:""}</div>
+      <div class="product-foot">
+        <span class="product-price">Prix selon relevés<br>disponibles</span>
+        <button class="add" type="button" data-add="${esc(p.code)}" aria-label="Ajouter ${esc(p.name)}">+</button>
+      </div>
+    </div>
+  </article>`;
+}
+async function searchProducts(term){
+  const q=String(term||"").trim();
+  if(!q)return;
+  $("searchBtn").disabled=true;
+  $("searchBtn").textContent="Recherche…";
+  showStatus("Recherche dans le catalogue Open Food Facts…");
+  $("products").innerHTML='<div class="empty"><span class="spinner"></span>Chargement du catalogue…</div>';
+  try{
+    const params=new URLSearchParams({
+      search_terms:q,
+      search_simple:"1",
+      action:"process",
+      json:"1",
+      page_size:"24",
+      fields:"code,product_name,product_name_fr,brands,quantity,image_front_small_url,categories_tags"
+    });
+    const response=await fetch(OFF_SEARCH+"?"+params.toString(),{headers:{Accept:"application/json"}});
+    if(!response.ok)throw new Error("Le catalogue produits est temporairement indisponible (HTTP "+response.status+").");
+    const data=await response.json();
+    results=(data.products||[])
+      .map(cleanProduct)
+      .filter(p=>p.code&&p.name&&p.name!=="Produit sans nom");
+    if(!results.length){
+      $("products").innerHTML='<div class="empty">Aucun résultat trouvé. Essaie une autre recherche ou un code-barres.</div>';
+      showStatus("Aucun produit trouvé. La base collaborative ne contient pas encore tous les produits.");
+    }else{
+      $("products").innerHTML=results.map(productCard).join("");
+      showStatus(results.length+" résultats issus d'Open Food Facts. Ajoute les références souhaitées au panier.");
+    }
+    $("catalogCount").textContent="Open Food Facts";
+  }catch(err){
+    $("products").innerHTML='<div class="empty">La recherche n’a pas abouti.</div>';
+    showStatus((err.message||"Erreur réseau.")+" Vérifie ta connexion et réessaie.","error");
+  }finally{
+    $("searchBtn").disabled=false;
+    $("searchBtn").textContent="Rechercher";
+  }
+}
+function addProduct(code){
+  const p=results.find(x=>x.code===String(code));
+  if(!p)return;
+  if(basket[code])basket[code].qty=Math.min(99,basket[code].qty+1);
+  else basket[code]={product:p,qty:1};
+  saveBasket();
+  renderBasket();
+  toast(p.name+" ajouté au panier");
+}
+function changeQty(code,delta){
+  if(!basket[code])return;
+  const q=basket[code].qty+delta;
+  if(q<=0)delete basket[code];
+  else basket[code].qty=Math.min(99,q);
+  saveBasket();
+  renderBasket();
+}
+function renderBasket(){
+  const items=basketItems();
+  const qty=totalQty();
+  $("basketCount").textContent=qty+" article"+(qty>1?"s":"");
+  $("heroCount").textContent=qty+" article"+(qty>1?"s":"");
+  if(!items.length){
+    $("basketItems").innerHTML='<div class="basket-empty"><div class="emoji">🛍️</div><strong>Votre panier est vide</strong><p>Recherchez vos produits et ajoutez-les ici pour comparer les prix.</p></div>';
+  }else{
+    $("basketItems").innerHTML=items.map(({code,item:p,qty})=>`
+      <div class="basket-item">
+        <div class="basket-emoji">${p.image?`<img src="${esc(p.image)}" alt="" style="width:30px;height:30px;object-fit:contain" onerror="this.outerHTML='🛒'">`:"🛒"}</div>
+        <div>
+          <div class="basket-name">${esc(p.name)}</div>
+          <div class="basket-meta">${esc(p.quantity||p.brand||"Code-barres "+code)}</div>
+          <div class="qty">
+            <button data-qty="${esc(code)}" data-delta="-1" aria-label="Retirer un article">−</button>
+            <span>${qty}</span>
+            <button data-qty="${esc(code)}" data-delta="1" aria-label="Ajouter un article">+</button>
+          </div>
+        </div>
+        <div class="basket-line-price">—<div class="basket-meta">prix à comparer</div></div>
+      </div>`).join("");
+  }
+  $("basketSubtotal").textContent="À comparer";
+  $("basketTotal").textContent="—";
+  $("bestTotal").textContent="—";
+  renderComparisonMessage();
+}
+function renderComparisonMessage(){
+  if(!productCount()){
+    $("stores").innerHTML='<div class="empty">Votre comparatif apparaîtra ici après ajout d’articles.</div>';
+    $("compareDescription").textContent="Ajoutez des produits au panier, puis lancez la comparaison.";
+  }
+}
+function storeKey(rec){
+  const loc=rec.location||{};
+  if(loc.id!=null)return "id:"+loc.id;
+  if(loc.osm_type&&loc.osm_id)return "osm:"+loc.osm_type+":"+loc.osm_id;
+  if(loc.website_url)return "url:"+loc.website_url;
+  return "name:"+[loc.osm_name||loc.osm_brand||loc.name||"Magasin",loc.osm_address_city||""].join("|");
+}
+function storeLabel(loc){
+  if(!loc)return"Magasin non renseigné";
+  if(loc.type==="ONLINE"){
+    try{return new URL(loc.website_url).hostname.replace(/^www\./,"")||"Magasin en ligne";}
+    catch(e){return"Magasin en ligne";}
+  }
+  return loc.osm_name||loc.osm_brand||loc.name||"Magasin non renseigné";
+}
+async function getPricesForProduct(code){
+  const params=new URLSearchParams({
+    product_code:String(code),
+    order_by:"-date",
+    size:"100",
+    page:"1"
+  });
+  if(userLocation){
+    params.set("lat",String(userLocation.lat));
+    params.set("lon",String(userLocation.lon));
+    params.set("radius_km","25");
+  }
+  const response=await fetch(PRICES_API+"?"+params.toString(),{headers:{Accept:"application/json"}});
+  if(!response.ok)throw new Error("Open Prices indisponible (HTTP "+response.status+")");
+  const data=await response.json();
+  const list=Array.isArray(data.items)?data.items:(Array.isArray(data.results)?data.results:[]);
+  const latest=new Map();
+  for(const r of list){
+    const amount=Number(r.price);
+    if(!Number.isFinite(amount)||amount<=0)continue;
+    const currency=String(r.currency||"EUR").toUpperCase();
+    if(currency!=="EUR")continue;
+    const loc=r.location||{};
+    const key=storeKey(r);
+    if(key==="name:Magasin non renseigné|")continue;
+    const item={
+      code:String(code),
+      price:amount,
+      currency,
+      date:r.date||r.created||null,
+      loc,
+      key,
+      name:storeLabel(loc),
+      city:loc.osm_address_city||"",
+      website:loc.website_url||"",
+      recent:agoDays(r.date||r.created)<=RECENT_DAYS,
+      discounted:Boolean(r.price_is_discounted),
+      sourceId:r.id
+    };
+    const prev=latest.get(key);
+    if(!prev||String(item.date||"")>String(prev.date||""))latest.set(key,item);
+  }
+  return {prices:[...latest.values()],total:Number(data.total||list.length)};
+}
+async function mapLimit(items,limit,fn){
+  const out=new Array(items.length);
+  let next=0;
+  async function worker(){
+    while(true){
+      const index=next++;
+      if(index>=items.length)return;
+      try{out[index]=await fn(items[index],index);}
+      catch(e){out[index]={error:e};}
+    }
+  }
+  await Promise.all(Array.from({length:Math.min(limit,items.length)},worker));
+  return out;
+}
+async function compareBasket(){
+  const items=basketItems();
+  if(!items.length){toast("Ajoute au moins un produit avant de comparer.");return;}
+  $("compareBtn").disabled=true;
+  $("compareBtn").innerHTML='<span class="spinner"></span>Comparaison…';
+  $("stores").innerHTML='<div class="empty"><span class="spinner"></span>Recherche de prix relevés dans Open Prices…</div>';
+  $("compareDescription").textContent=userLocation
+    ?"Recherche limitée aux relevés à environ 25 km de votre position (selon la couverture des données)."
+    :"Recherche parmi les relevés disponibles, sans filtre géographique. Activez « Autour de moi » pour tenter de limiter les résultats à votre zone.";
+  try{
+    const lookups=await mapLimit(items,4,async entry=>({entry,...await getPricesForProduct(entry.code)}));
+    productPrices={};
+    for(const r of lookups)productPrices[r.entry.code]=r.error?[]:r.prices;
+    const stores=new Map();
+    for(const {entry} of lookups){
+      for(const price of (productPrices[entry.code]||[])){
+        if(!price.recent)continue;
+        if(!stores.has(price.key)){
+          stores.set(price.key,{
+            key:price.key,name:price.name,city:price.city,
+            website:price.website,prices:{},lastDate:price.date
+          });
+        }
+        const st=stores.get(price.key);
+        st.prices[entry.code]=price;
+        if(String(price.date||"")>String(st.lastDate||""))st.lastDate=price.date;
+      }
+    }
+    const summaries=[...stores.values()].map(s=>{
+      const found=items.filter(({code})=>s.prices[code]);
+      const total=found.reduce((sum,entry)=>sum+s.prices[entry.code].price*entry.qty,0);
+      return {...s,total,covered:found.length,complete:found.length===items.length};
+    }).sort((a,b)=>Number(b.complete)-Number(a.complete)||b.covered-a.covered||a.total-b.total);
+    const complete=summaries.filter(s=>s.complete);
+    $("bestTotal").textContent=complete.length?money(complete[0].total):"Pas assez de données";
+    $("basketTotal").textContent=complete.length?money(complete[0].total):"—";
+    $("basketSubtotal").textContent=complete.length?money(complete[0].total):"Partiel";
+    if(!summaries.length){
+      $("stores").innerHTML='<div class="empty">Aucun relevé de prix récent n’a été trouvé pour les produits de votre panier dans cette zone. Essayez sans filtre géographique ou ajoutez des relevés sur Open Prices.</div>';
+    }else{
+      const max=Math.max(...summaries.map(x=>x.total),1);
+      $("stores").innerHTML=summaries.slice(0,30).map((s,index)=>{
+        const width=Math.max(5,s.total/max*100);
+        const label=s.complete?money(s.total):"—";
+        const url=s.website&&/^https:\/\//i.test(s.website)
+          ?`<a class="data-link" target="_blank" rel="noopener" href="${esc(s.website)}">Site du magasin ↗</a>`:"";
+        return `<article class="store-card">
+          <div class="store-top">
+            <div class="store-icon">${s.website?"🌐":"🏬"}</div>
+            <div class="store-middle">
+              <div class="store-name">${esc(s.name)}</div>
+              <div class="store-detail">${esc(s.city||"Localisation non précisée")} · ${s.covered}/${items.length} produits avec un relevé récent<br>${s.lastDate?"Relevé le "+esc(dateLabel(s.lastDate)):"Date inconnue"}</div>
+              ${s.complete&&index===0?'<span class="best-label">MEILLEUR PANIER COMPLET</span>':""}${url}
+            </div>
+            <div class="store-total">${label}<small>${s.complete?"panier complet":"total non calculable"}</small></div>
+          </div>
+          <div class="store-bar"><div style="width:${width}%"></div></div>
+          <div class="store-footer"><span>${s.complete?"Tous les articles comparés":"Couverture partielle : "+s.covered+" sur "+items.length}</span><span>${s.complete?"Relevés récents":"Prix manquants ignorés"}</span></div>
+        </article>`;
+      }).join("");
+      if(!complete.length){
+        $("stores").insertAdjacentHTML("afterbegin",'<div class="status show">Aucun magasin ne dispose d’un relevé récent pour tous les produits du panier. Les résultats ci-dessous sont partiels et ne permettent pas de désigner un panier complet moins cher.</div>');
+      }
+    }
+    const perItemHTML=items.map(({code,item,qty})=>{
+      const choices=(productPrices[code]||[]).filter(p=>p.recent).sort((a,b)=>a.price-b.price);
+      if(!choices.length){
+        return `<article class="store-card"><div class="store-top"><div class="store-icon">🔎</div><div class="store-middle"><div class="store-name">${esc(item.name)}</div><div class="store-detail">${esc(item.quantity||"Format non renseigné")} · quantité : ${qty}</div></div><div class="store-total">—<small>aucun relevé récent</small></div></div></article>`;
+      }
+      const offers=choices.slice(0,3).map(p=>`<div class="store-detail" style="display:flex;justify-content:space-between;gap:8px"><span>${esc(p.name)}${p.city?" · "+esc(p.city):""}</span><b style="color:var(--green);white-space:nowrap">${money(p.price)}${p.date?" · "+esc(dateLabel(p.date)):""}</b></div>`).join("");
+      const best=choices[0];
+      return `<article class="store-card"><div class="store-top"><div class="store-icon">${item.image?"📦":"🛒"}</div><div class="store-middle"><div class="store-name">${esc(item.name)}</div><div class="store-detail">${esc(item.quantity||"Format non renseigné")} · quantité : ${qty}</div></div><div class="store-total">${money(best.price)}<small>meilleur relevé récent</small></div></div><div style="margin-top:10px;display:grid;gap:5px">${offers}</div></article>`;
+    }).join("");
+    $("stores").insertAdjacentHTML("beforeend",`<div style="margin:22px 0 10px;font-size:10px;letter-spacing:1.5px;font-weight:900;color:var(--green);text-transform:uppercase">Prix relevés par article</div>${perItemHTML}`);
+    const errors=lookups.filter(x=>x.error).length;
+    if(errors)toast("Comparaison terminée avec "+errors+" source(s) indisponible(s).");
+    else toast("Comparaison actualisée à partir des relevés disponibles.");
+    if(userLocation){
+      $("compareDescription").textContent="Relevés demandés dans un rayon d’environ 25 km. Les données manquantes ne signifient pas que le magasin ne vend pas le produit.";
+    }
+  }catch(err){
+    $("stores").innerHTML='<div class="empty">Impossible de charger les données de prix. Réessayez plus tard.</div>';
+    toast(err.message||"Erreur de comparaison");
+  }finally{
+    $("compareBtn").disabled=false;
+    $("compareBtn").textContent="Comparer les prix →";
+  }
+}
+function requestLocation(){
+  if(!navigator.geolocation){toast("La géolocalisation n’est pas disponible dans ce navigateur.");return;}
+  $("locationBtn").disabled=true;
+  $("locationBtn").textContent="Localisation…";
+  navigator.geolocation.getCurrentPosition(pos=>{
+    userLocation={lat:pos.coords.latitude,lon:pos.coords.longitude};
+    $("locationBtn").textContent="⌖ Position activée";
+    $("locationBtn").disabled=false;
+    toast("Position obtenue. La prochaine comparaison tentera un filtre de 25 km.");
+  },err=>{
+    $("locationBtn").textContent="⌖ Autour de moi";
+    $("locationBtn").disabled=false;
+    toast(err.code===1?"Autorisez la localisation dans le navigateur.":"Position indisponible. Réessayez.");
+  },{enableHighAccuracy:true,timeout:12000,maximumAge:60000});
+}
+$("searchForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  searchProducts($("search").value);
+});
+$("suggestions").addEventListener("click",e=>{
+  const b=e.target.closest("[data-query]");
+  if(!b)return;
+  $("search").value=b.dataset.query;
+  searchProducts(b.dataset.query);
+});
+$("products").addEventListener("click",e=>{
+  const b=e.target.closest("[data-add]");
+  if(b)addProduct(b.dataset.add);
+});
+$("basketItems").addEventListener("click",e=>{
+  const b=e.target.closest("[data-qty]");
+  if(b)changeQty(b.dataset.qty,Number(b.dataset.delta));
+});
+$("compareBtn").addEventListener("click",compareBasket);
+$("locationBtn").addEventListener("click",requestLocation);
+$("refreshBtn").addEventListener("click",()=>{
+  if(productCount())compareBasket();
+  else if($("search").value.trim())searchProducts($("search").value);
+  else toast("Recherchez un produit ou ajoutez-le au panier.");
+});
+$("clearBasket").addEventListener("click",()=>{
+  if(!productCount()){toast("Le panier est déjà vide.");return;}
+  if(!confirm("Vider complètement votre panier ?"))return;
+  basket={};
+  saveBasket();
+  renderBasket();
+  toast("Panier vidé.");
+});
+$("saveBasket").addEventListener("click",()=>{
+  saveBasket();
+  toast("Panier sauvegardé sur cet appareil.");
+});
+renderBasket();
+</script>
+</body>
+</html>
