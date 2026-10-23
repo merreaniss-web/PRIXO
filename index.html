@@ -8,10 +8,10 @@
 <title>PRIXO — Comparateur de courses</title>
 <style>
 :root{--bg:#f6f7f1;--paper:#fff;--ink:#1e2922;--muted:#7b857b;--green:#174d35;--lime:#d8f27d;--soft:#eef3e6;--line:#e7ebe2;--red:#b4483b;--shadow:0 12px 35px #1839220b}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:2px solid #759a49;outline-offset:3px}.app{max-width:1250px;margin:auto;padding:0 24px 40px}header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:16px}.brand{display:flex;align-items:center;gap:10px;font-size:22px;letter-spacing:-1px;font-weight:950}.brand-icon{height:38px;width:38px;border-radius:13px;background:var(--green);color:var(--lime);display:grid;place-items:center;font-size:22px}.brand-name span{color:var(--green)}.head-actions{display:flex;align-items:center;gap:8px}.head-btn{background:white;border:1px solid var(--line);border-radius:12px;padding:11px 13px;color:var(--ink);font-size:12px;font-weight:800}.hero{padding:33px 0 24px;display:flex;justify-content:space-between;align-items:end;gap:20px}.eyebrow{color:var(--green);font-size:10px;text-transform:uppercase;letter-spacing:1.9px;font-weight:900}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.03;letter-spacing:-2.5px;margin:12px 0;font-weight:950}.hero h1 em{color:var(--green);font-style:normal}.hero p{max-width:540px;font-size:13px;line-height:1.75;color:var(--muted);margin:0}.live-box{min-width:180px;background:var(--lime);border-radius:17px;padding:14px 17px}.live-box small{display:block;color:#4e5d37;font-size:9px;font-weight:900;letter-spacing:1px}.live-box strong{display:block;font-size:23px;margin-top:5px;letter-spacing:-.7px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:20px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:21px;padding:20px;box-shadow:var(--shadow);min-width:0}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:15px}.panel-head h2{font-size:17px;letter-spacing:-.5px;margin:0}.muted{color:var(--muted)}.small{font-size:10px}.count{background:var(--soft);color:var(--green);padding:6px 8px;border-radius:8px;font-size:10px;font-weight:900;white-space:nowrap}.search-row{display:flex;gap:9px}.search-wrap{position:relative;flex:1;min-width:0}.search-wrap input{height:48px;width:100%;padding:0 13px 0 39px;border:1px solid var(--line);border-radius:13px;background:#f9faf6;outline:none;color:var(--ink)}.search-wrap input:focus{border-color:#9db88b}.search-icon{position:absolute;top:14px;left:14px;color:var(--muted)}.btn{border:0;border-radius:13px;min-height:45px;padding:0 15px;font-size:12px;font-weight:850}.primary{background:var(--green);color:white}.primary:hover{background:#103e29}.secondary{background:white;border:1px solid var(--line);color:var(--green)}.suggestions{display:flex;gap:7px;overflow:auto;scrollbar-width:none;margin:12px 0 18px;padding-bottom:2px}.suggestions button{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:24px;padding:8px 11px;font-size:10px;font-weight:750;color:#5c685d}.suggestions button:hover{border-color:var(--green);color:var(--green)}.status{display:none;margin:12px 0;padding:10px 12px;border-radius:11px;background:#f3f5ed;color:#5b665a;font-size:11px;line-height:1.55;overflow-wrap:anywhere}.status.show{display:block}.status.error{background:#fff0ed;color:var(--red)}.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.product{border:1px solid var(--line);border-radius:15px;overflow:hidden;min-width:0;display:flex;flex-direction:column}.product-image{height:116px;background:#f3f5ee;display:grid;place-items:center;padding:8px;position:relative}.product-image img{height:100%;width:100%;object-fit:contain}.product-placeholder{font-size:43px}.brand-tag{position:absolute;left:8px;top:8px;background:#ffffffdf;border-radius:6px;font-size:8px;font-weight:850;padding:5px 6px;max-width:85%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.product-body{padding:10px;display:flex;flex:1;flex-direction:column}.product-name{font-size:12px;font-weight:850;line-height:1.4;min-height:34px;overflow-wrap:anywhere}.product-detail{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.5}.product-foot{margin-top:auto;padding-top:10px;display:flex;align-items:center;justify-content:space-between;gap:6px}.product-price{font-size:10px;color:var(--muted);line-height:1.4}.add{width:31px;height:31px;border:0;border-radius:10px;background:var(--lime);color:var(--green);font-size:20px;font-weight:900;flex-shrink:0}.add:hover{background:#c9e965}.empty{grid-column:1/-1;text-align:center;padding:28px 12px;color:var(--muted);font-size:12px;line-height:1.7}.fineprint{font-size:10px;line-height:1.65;color:var(--muted);margin:16px 0 0}.basket-panel{position:sticky;top:15px}.basket-title{display:flex;align-items:center;gap:9px}.clear-btn{border:0;background:transparent;text-decoration:underline;font-size:11px;color:var(--muted)}.basket-empty{text-align:center;color:var(--muted);padding:22px 8px}.basket-empty .emoji{font-size:38px;margin-bottom:8px}.basket-empty strong{display:block;color:var(--ink);font-size:13px;margin-bottom:6px}.basket-empty p{font-size:11px;line-height:1.65;margin:0}.basket-item{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:9px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.basket-emoji{height:38px;width:38px;border-radius:11px;background:#f2f5ec;display:grid;place-items:center;font-size:20px}.basket-name{font-size:11px;font-weight:850;line-height:1.45;overflow-wrap:anywhere}.basket-meta{font-size:10px;color:var(--muted);margin-top:3px}.qty{display:flex;align-items:center;gap:8px;margin-top:7px}.qty button{height:23px;width:24px;border:1px solid var(--line);background:white;border-radius:7px;font-weight:850}.qty span{font-size:11px;font-weight:850;min-width:10px;text-align:center}.basket-line-price{font-size:11px;font-weight:900;text-align:right;white-space:nowrap}.summary{border-top:1px solid var(--line);margin-top:14px;padding-top:14px}.sum-row{display:flex;align-items:center;justify-content:space-between;margin:9px 0;gap:10px;font-size:11px;color:var(--muted)}.sum-row strong{color:var(--ink);font-size:12px}.sum-total{display:flex;justify-content:space-between;align-items:end;margin:17px 0}.sum-total span{font-size:12px;font-weight:850}.sum-total strong{font-size:27px;letter-spacing:-.9px}.full{width:100%;min-height:49px}.saved{width:100%;margin-top:9px;min-height:42px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--green);font-size:11px;font-weight:800}.compare-panel{margin-top:18px}.compare-description{font-size:11px;line-height:1.65;color:var(--muted);margin:-4px 0 14px}.store-card{padding:13px;border:1px solid var(--line);border-radius:14px;margin:9px 0}.store-top{display:flex;align-items:start;gap:9px}.store-icon{height:36px;width:36px;border-radius:10px;background:#f1f4e9;display:grid;place-items:center;font-size:17px;flex-shrink:0}.store-middle{flex:1;min-width:0}.store-name{font-size:12px;font-weight:900;overflow-wrap:anywhere}.store-detail{font-size:10px;color:var(--muted);line-height:1.6;margin-top:4px;overflow-wrap:anywhere}.store-total{text-align:right;font-size:15px;font-weight:900;white-space:nowrap}.store-total small{display:block;margin-top:4px;color:var(--muted);font-size:9px;font-weight:650}.store-bar{height:5px;border-radius:20px;background:#edf0e7;overflow:hidden;margin:12px 0 7px}.store-bar div{height:100%;background:#83a86a;border-radius:20px}.store-footer{display:flex;justify-content:space-between;gap:8px;font-size:10px;color:var(--muted)}.best-label{display:inline-block;background:var(--lime);color:var(--green);border-radius:5px;padding:4px 6px;font-size:8px;font-weight:900;margin-top:6px}.data-link{color:var(--green);font-size:10px;font-weight:800}.attribution{font-size:10px;color:var(--muted);line-height:1.65;margin-top:15px}.attribution a{color:var(--green)}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#173e2c;color:white;padding:12px 18px;border-radius:12px;font-size:12px;font-weight:800;z-index:1000;transition:.2s;max-width:calc(100% - 24px);text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.spinner{width:14px;height:14px;border:2px solid #dce7d8;border-top-color:var(--green);border-radius:50%;display:inline-block;animation:spin .7s linear infinite;vertical-align:middle;margin-right:6px}@keyframes spin{to{transform:rotate(360deg)}}.footer{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:9px;padding:20px 2px 0;line-height:1.6}.footer a{color:var(--muted)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible{outline:2px solid #759a49;outline-offset:3px}.app{max-width:1250px;margin:auto;padding:0 24px 40px}header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);gap:16px}.brand{display:flex;align-items:center;gap:10px;font-size:22px;letter-spacing:-1px;font-weight:950}.brand-icon{height:38px;width:38px;border-radius:13px;background:var(--green);color:var(--lime);display:grid;place-items:center;font-size:22px}.brand-name span{color:var(--green)}.head-actions{display:flex;align-items:center;gap:8px}.head-btn{background:white;border:1px solid var(--line);border-radius:12px;padding:11px 13px;color:var(--ink);font-size:12px;font-weight:800}.hero{padding:33px 0 24px;display:flex;justify-content:space-between;align-items:end;gap:20px}.eyebrow{color:var(--green);font-size:10px;text-transform:uppercase;letter-spacing:1.9px;font-weight:900}.hero h1{font-size:clamp(34px,5vw,54px);line-height:1.03;letter-spacing:-2.5px;margin:12px 0;font-weight:950}.hero h1 em{color:var(--green);font-style:normal}.hero p{max-width:540px;font-size:13px;line-height:1.75;color:var(--muted);margin:0}.live-box{min-width:180px;background:var(--lime);border-radius:17px;padding:14px 17px}.live-box small{display:block;color:#4e5d37;font-size:9px;font-weight:900;letter-spacing:1px}.live-box strong{display:block;font-size:23px;margin-top:5px;letter-spacing:-.7px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:20px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:21px;padding:20px;box-shadow:var(--shadow);min-width:0}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:15px}.panel-head h2{font-size:17px;letter-spacing:-.5px;margin:0}.muted{color:var(--muted)}.small{font-size:10px}.count{background:var(--soft);color:var(--green);padding:6px 8px;border-radius:8px;font-size:10px;font-weight:900;white-space:nowrap}.search-row{display:flex;gap:9px}.search-wrap{position:relative;flex:1;min-width:0}.search-wrap input{height:48px;width:100%;padding:0 13px 0 39px;border:1px solid var(--line);border-radius:13px;background:#f9faf6;outline:none;color:var(--ink)}.search-wrap input:focus{border-color:#9db88b}.search-icon{position:absolute;top:14px;left:14px;color:var(--muted)}.btn{border:0;border-radius:13px;min-height:45px;padding:0 15px;font-size:12px;font-weight:850}.primary{background:var(--green);color:white}.primary:hover{background:#103e29}.secondary{background:white;border:1px solid var(--line);color:var(--green)}.suggestions{display:flex;gap:7px;overflow:auto;scrollbar-width:none;margin:12px 0 18px;padding-bottom:2px}.suggestions button{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:24px;padding:8px 11px;font-size:10px;font-weight:750;color:#5c685d}.suggestions button:hover{border-color:var(--green);color:var(--green)}.status{display:none;margin:12px 0;padding:10px 12px;border-radius:11px;background:#f3f5ed;color:#5b665a;font-size:11px;line-height:1.55;overflow-wrap:anywhere}.status.show{display:block}.status.error{background:#fff0ed;color:var(--red)}.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.product{border:1px solid var(--line);border-radius:15px;overflow:hidden;min-width:0;display:flex;flex-direction:column}.product-image{height:116px;background:#f3f5ee;display:grid;place-items:center;padding:8px;position:relative}.product-image img{height:100%;width:100%;object-fit:contain;background:#fff}.product-image.no-image:after{content:"Photo indisponible";font-size:10px;color:var(--muted)}.brand-filter{align-self:flex-start;margin-top:8px;border:1px solid var(--line);border-radius:8px;background:#f8faf4;color:var(--green);padding:6px 8px;font-size:9px;font-weight:850;text-align:left;max-width:100%}.product-placeholder{font-size:43px}.brand-tag{position:absolute;left:8px;top:8px;background:#ffffffdf;border-radius:6px;font-size:8px;font-weight:850;padding:5px 6px;max-width:85%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.product-body{padding:10px;display:flex;flex:1;flex-direction:column}.product-name{font-size:12px;font-weight:850;line-height:1.4;min-height:34px;overflow-wrap:anywhere}.product-detail{font-size:10px;color:var(--muted);margin-top:4px;line-height:1.5}.product-foot{margin-top:auto;padding-top:10px;display:flex;align-items:center;justify-content:space-between;gap:6px}.product-price{font-size:10px;color:var(--muted);line-height:1.4}.add{width:31px;height:31px;border:0;border-radius:10px;background:var(--lime);color:var(--green);font-size:20px;font-weight:900;flex-shrink:0}.add:hover{background:#c9e965}.empty{grid-column:1/-1;text-align:center;padding:28px 12px;color:var(--muted);font-size:12px;line-height:1.7}.fineprint{font-size:10px;line-height:1.65;color:var(--muted);margin:16px 0 0}.basket-panel{position:sticky;top:15px}.basket-title{display:flex;align-items:center;gap:9px}.clear-btn{border:0;background:transparent;text-decoration:underline;font-size:11px;color:var(--muted)}.basket-empty{text-align:center;color:var(--muted);padding:22px 8px}.basket-empty .emoji{font-size:38px;margin-bottom:8px}.basket-empty strong{display:block;color:var(--ink);font-size:13px;margin-bottom:6px}.basket-empty p{font-size:11px;line-height:1.65;margin:0}.basket-item{display:grid;grid-template-columns:38px minmax(0,1fr) auto;gap:9px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}.basket-emoji{height:38px;width:38px;border-radius:11px;background:#f2f5ec;display:grid;place-items:center;font-size:20px}.basket-name{font-size:11px;font-weight:850;line-height:1.45;overflow-wrap:anywhere}.basket-meta{font-size:10px;color:var(--muted);margin-top:3px}.qty{display:flex;align-items:center;gap:8px;margin-top:7px}.qty button{height:23px;width:24px;border:1px solid var(--line);background:white;border-radius:7px;font-weight:850}.qty span{font-size:11px;font-weight:850;min-width:10px;text-align:center}.basket-line-price{font-size:11px;font-weight:900;text-align:right;white-space:nowrap}.summary{border-top:1px solid var(--line);margin-top:14px;padding-top:14px}.sum-row{display:flex;align-items:center;justify-content:space-between;margin:9px 0;gap:10px;font-size:11px;color:var(--muted)}.sum-row strong{color:var(--ink);font-size:12px}.sum-total{display:flex;justify-content:space-between;align-items:end;margin:17px 0}.sum-total span{font-size:12px;font-weight:850}.sum-total strong{font-size:27px;letter-spacing:-.9px}.full{width:100%;min-height:49px}.saved{width:100%;margin-top:9px;min-height:42px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--green);font-size:11px;font-weight:800}.compare-panel{margin-top:18px}.compare-description{font-size:11px;line-height:1.65;color:var(--muted);margin:-4px 0 14px}.store-card{padding:13px;border:1px solid var(--line);border-radius:14px;margin:9px 0}.store-top{display:flex;align-items:start;gap:9px}.store-icon{height:36px;width:36px;border-radius:10px;background:#f1f4e9;display:grid;place-items:center;font-size:17px;flex-shrink:0}.store-middle{flex:1;min-width:0}.store-name{font-size:12px;font-weight:900;overflow-wrap:anywhere}.store-detail{font-size:10px;color:var(--muted);line-height:1.6;margin-top:4px;overflow-wrap:anywhere}.store-total{text-align:right;font-size:15px;font-weight:900;white-space:nowrap}.store-total small{display:block;margin-top:4px;color:var(--muted);font-size:9px;font-weight:650}.store-bar{height:5px;border-radius:20px;background:#edf0e7;overflow:hidden;margin:12px 0 7px}.store-bar div{height:100%;background:#83a86a;border-radius:20px}.store-footer{display:flex;justify-content:space-between;gap:8px;font-size:10px;color:var(--muted)}.best-label{display:inline-block;background:var(--lime);color:var(--green);border-radius:5px;padding:4px 6px;font-size:8px;font-weight:900;margin-top:6px}.data-link{color:var(--green);font-size:10px;font-weight:800}.store-actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.action-link{display:inline-flex;align-items:center;justify-content:center;border-radius:9px;padding:8px 10px;font-size:10px;font-weight:850;text-decoration:none;border:1px solid var(--line);background:#fff;color:var(--green)}.action-link.primary-action{background:var(--green);border-color:var(--green);color:#fff}.retailer-ranking{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:10px 0 18px}.retailer-summary{border:1px solid var(--line);border-radius:13px;padding:12px;min-width:0;background:#fff}.retailer-summary .chain{font-size:11px;font-weight:900}.retailer-summary .chain-total{font-size:19px;font-weight:950;letter-spacing:-.6px;margin-top:7px}.retailer-summary .chain-meta{font-size:10px;color:var(--muted);line-height:1.55;margin-top:5px}.section-kicker{font-size:10px;letter-spacing:1.4px;font-weight:900;color:var(--green);text-transform:uppercase;margin:20px 0 7px}.attribution{font-size:10px;color:var(--muted);line-height:1.65;margin-top:15px}.attribution a{color:var(--green)}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#173e2c;color:white;padding:12px 18px;border-radius:12px;font-size:12px;font-weight:800;z-index:1000;transition:.2s;max-width:calc(100% - 24px);text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.spinner{width:14px;height:14px;border:2px solid #dce7d8;border-top-color:var(--green);border-radius:50%;display:inline-block;animation:spin .7s linear infinite;vertical-align:middle;margin-right:6px}@keyframes spin{to{transform:rotate(360deg)}}.footer{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:9px;padding:20px 2px 0;line-height:1.6}.footer a{color:var(--muted)}
 @media(max-width:870px){.app{padding:0 15px 30px}.layout{grid-template-columns:1fr}.basket-panel{position:static}.products{grid-template-columns:repeat(3,minmax(0,1fr))}.hero{align-items:start}}
 @media(max-width:540px){.app{padding:0 11px 25px}header{height:68px}.brand{font-size:20px}.head-btn{padding:10px 9px;font-size:10px}.hero{padding:26px 0 20px;display:block}.hero h1{font-size:39px;letter-spacing:-2px}.hero p{font-size:12px}.live-box{display:inline-block;margin-top:15px;min-width:0;padding:10px 14px}.live-box strong{font-size:20px}.panel{padding:13px;border-radius:17px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.product-image{height:105px}.product-name{font-size:11px}.search-row{gap:7px}.btn{padding:0 11px}.store-total{font-size:13px}.footer{flex-direction:column}}
-</style>
+.spinner{display:inline-block;width:17px;height:17px;border:2px solid #d7e2cf;border-top-color:var(--green);border-radius:50%;animation:prixo-spin .8s linear infinite;vertical-align:middle}@keyframes prixo-spin{to{transform:rotate(360deg)}}.price-line{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:6px 0;border-bottom:1px solid var(--line)}.price-line:last-child{border-bottom:0}.price-line b{color:var(--green);white-space:nowrap;font-size:11px}.retailer-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.product-image img{object-fit:contain;mix-blend-mode:multiply}.add:disabled{opacity:.35;cursor:not-allowed}</style>
 </head>
 <body>
 <div class="app">
@@ -20,24 +20,30 @@
   <div class="head-actions"><button class="head-btn" id="locationBtn">⌖ Autour de moi</button><button class="head-btn" id="refreshBtn">↻ Actualiser</button></div>
 </header>
 <section class="hero">
-  <div><div class="eyebrow">Le comparateur de courses</div><h1>Faites vos courses.<br><em>Pas vos économies.</em></h1><p>Recherchez vos produits, composez votre panier et comparez les prix réellement relevés dans les sources disponibles.</p></div>
+  <div><div class="eyebrow">Le comparateur de courses</div><h1>Faites vos courses.<br><em>Pas vos économies.</em></h1><p>Compose ton panier, compare les prix relevés et trouve les magasins proches. Les prix sont associés à leur date et à leur magasin.</p></div>
   <div class="live-box"><small>PRODUITS EN PANIER</small><strong id="heroCount">0 article</strong></div>
 </section>
 <div class="layout">
 <main>
   <section class="panel">
-    <div class="panel-head"><h2>Rechercher des produits</h2><span class="count" id="catalogCount">Base ouverte</span></div>
-    <form id="searchForm" class="search-row"><div class="search-wrap"><span class="search-icon">⌕</span><input id="search" type="search" autocomplete="off" placeholder="Ex. lait demi-écrémé, pâtes, Nutella…" required></div><button id="searchBtn" class="btn primary" type="submit">Rechercher</button></form>
+    <div class="panel-head"><h2>Rechercher des produits</h2><span class="count" id="catalogCount">Catalogue produits</span></div>
+    <form id="searchForm" class="search-row"><div class="search-wrap"><span class="search-icon">⌕</span><input id="search" type="search" autocomplete="off" placeholder="Ex. Barilla spaghetti, lait, Nutella…" required></div><button id="searchBtn" class="btn primary" type="submit">Rechercher</button></form>
     <div class="suggestions" id="suggestions"><button data-query="lait demi écrémé">🥛 Lait</button><button data-query="pâtes">🍝 Pâtes</button><button data-query="riz">🍚 Riz</button><button data-query="yaourt nature">🥣 Yaourts</button><button data-query="café moulu">☕ Café</button><button data-query="huile olive">🫒 Huile d'olive</button><button data-query="lessive">🫧 Lessive</button><button data-query="bananes">🍌 Bananes</button></div>
     <div class="status" id="status" role="status" aria-live="polite"></div>
-    <div class="products" id="products"><div class="empty">Recherchez un produit pour interroger le catalogue ouvert Open Food Facts.<br>Vous pourrez ensuite ajouter les résultats au panier.</div></div>
-    <p class="fineprint">Catalogue produit fourni par Open Food Facts. Les prix ne proviennent pas d'Open Food Facts : ils sont recherchés séparément dans Open Prices. Les résultats dépendent de la disponibilité de relevés pour chaque code-barres.</p>
+    <div class="products" id="products"><div class="empty">Recherche un produit pour voir les références disponibles dans plusieurs catalogues.</div></div>
+    <p class="fineprint">Catalogue produit : bases ouvertes. Les prix sont des relevés datés associés à un magasin et à un code-barres exact ; un relevé ne garantit pas le prix actuel en rayon.</p>
+  </section>
+  <section class="panel compare-panel" id="nearbyPanel" style="display:none">
+    <div class="panel-head"><h2 id="nearbyTitle">Magasins à proximité</h2><span class="count">GÉOLOCALISATION</span></div>
+    <p class="compare-description">Magasins autour de toi d’après les données cartographiques disponibles. Ouvre l’itinéraire ou le site officiel du magasin.</p>
+    <div id="nearbyStores"><div class="empty">Active « Autour de moi » pour chercher les magasins voisins.</div></div>
+    <p class="fineprint">Carte participative OpenStreetMap ; la liste peut être incomplète.</p>
   </section>
   <section class="panel compare-panel" id="comparisonPanel">
     <div class="panel-head"><h2>Comparaison des magasins</h2><span class="count">RELEVÉS RÉELS</span></div>
-    <p class="compare-description" id="compareDescription">Ajoutez des produits au panier, puis lancez la comparaison. Nous rechercherons les relevés de prix disponibles dans Open Prices. Les enseignes affichées dépendront des données disponibles.</p>
+    <p class="compare-description" id="compareDescription">Ajoute des produits au panier puis lance la comparaison. Les prix disponibles sont rapprochés à partir du code-barres EAN, du magasin et de la date du relevé.</p>
     <div id="stores"><div class="empty">Aucune comparaison lancée.</div></div>
-    <p class="attribution">Sources ouvertes : <a href="https://world.openfoodfacts.org/" target="_blank" rel="noopener">Open Food Facts</a> (produits) et <a href="https://prices.openfoodfacts.org/" target="_blank" rel="noopener">Open Prices</a> (relevés de prix). Les données de prix sont contributives : elles ne couvrent pas tous les produits et toutes les enseignes et ne sont pas nécessairement à jour.</p>
+    <p class="attribution">Sources : Open Food Facts pour les fiches produit, Open Prices pour les relevés de prix, OpenStreetMap pour les magasins proches. Les liens vers les enseignes ouvrent leur site ou Drive ; le transfert automatique du panier nécessite une intégration partenaire de chaque enseigne.</p>
   </section>
 </main>
 <aside>
@@ -50,406 +56,294 @@
   <section class="panel" style="margin-top:15px"><div class="eyebrow">La transparence avant tout</div><h2 style="font-size:19px;letter-spacing:-.6px;margin:9px 0">Pas de prix inventés.</h2><p class="muted" style="font-size:12px;line-height:1.7;margin:0">Si aucun prix récent n'est disponible pour un produit ou un magasin, PRIXO le signalera au lieu d'afficher un chiffre fictif.</p></section>
 </aside>
 </div>
-<footer class="footer"><span>PRIXO · PROTOTYPE WEB</span><span>Les relevés publics ne sont pas une garantie de prix en rayon. Vérifiez les tarifs et disponibilités auprès du magasin.</span></footer>
+<footer class="footer"><span>PRIXO · COMPARATEUR PAR MAGASIN</span><span>Les prix affichés dépendent des données transmises et de leur date. Vérifiez toujours le prix final auprès du magasin.</span></footer>
 </div>
 <div class="toast" id="toast" role="status"></div>
 <script>
 "use strict";
-const OFF_SEARCH="https://world.openfoodfacts.org/cgi/search.pl";
-const PRICES_API="https://prices.openfoodfacts.org/api/v1/prices";
-const RECENT_DAYS=180;
-const $=id=>document.getElementById(id);
-let results=[];
-let basket={};
-let userLocation=null;
-let productPrices={};
-let toastTimer=null;
+const $ = id => document.getElementById(id);
+const OFFICES = [
+  {key:"off", name:"Open Food Facts", base:"https://world.openfoodfacts.org"},
+  {key:"obf", name:"Open Beauty Facts", base:"https://world.openbeautyfacts.org"},
+  {key:"opff", name:"Open Pet Food Facts", base:"https://world.openpetfoodfacts.org"},
+  {key:"opf", name:"Open Products Facts", base:"https://world.openproductsfacts.org"}
+];
+const PRICE_API = "https://prices.openfoodfacts.org/api/v1/prices";
+const PRICE_DAYS = 365;
+const SEARCH_FIELDS = "code,product_name,product_name_fr,brands,quantity,image_front_url,image_front_small_url,image_url,selected_images,product_quantity,product_quantity_unit,categories_tags,countries_tags,stores,lang";
+const RETAILERS = [
+  {key:"carrefour",label:"Carrefour",site:"https://www.carrefour.fr/",drive:"https://www.carrefour.fr/drive",search:q=>"https://www.carrefour.fr/s?q="+encodeURIComponent(q),terms:["carrefour"]},
+  {key:"leclerc",label:"E.Leclerc",site:"https://www.e.leclerc/",drive:"https://www.leclercdrive.fr/",search:q=>"https://www.e.leclerc/recherche?q="+encodeURIComponent(q),terms:["e.leclerc","e leclerc","leclerc"]},
+  {key:"intermarche",label:"Intermarché",site:"https://www.intermarche.com/",drive:"https://drive.intermarche.com/",search:q=>"https://www.intermarche.com/recherche?q="+encodeURIComponent(q),terms:["intermarche","intermarché"]},
+  {key:"auchan",label:"Auchan",site:"https://www.auchan.fr/",drive:"https://www.auchan.fr/courses",search:q=>"https://www.auchan.fr/recherche?text="+encodeURIComponent(q),terms:["auchan"]},
+  {key:"lidl",label:"Lidl",site:"https://www.lidl.fr/",drive:"https://www.lidl.fr/",search:q=>"https://www.lidl.fr/search?query="+encodeURIComponent(q),terms:["lidl"]},
+  {key:"u",label:"Magasins U",site:"https://www.magasins-u.com/",drive:"https://www.coursesu.com/",search:q=>"https://www.coursesu.com/chercher?q="+encodeURIComponent(q),terms:["super u","hyper u","u express","systeme u","système u","magasins u"]},
+  {key:"aldi",label:"ALDI",site:"https://www.aldi.fr/",drive:"https://www.aldi.fr/",search:q=>"https://www.aldi.fr/"+"?q="+encodeURIComponent(q),terms:["aldi"]},
+  {key:"monoprix",label:"Monoprix",site:"https://www.monoprix.fr/",drive:"https://courses.monoprix.fr/",search:q=>"https://courses.monoprix.fr/"+"?q="+encodeURIComponent(q),terms:["monoprix"]},
+  {key:"franprix",label:"Franprix",site:"https://www.franprix.fr/",drive:"https://www.franprix.fr/",search:q=>"https://www.franprix.fr/"+"?q="+encodeURIComponent(q),terms:["franprix"]},
+  {key:"casino",label:"Casino",site:"https://www.mescoursescasino.fr/",drive:"https://www.mescoursescasino.fr/",search:q=>"https://www.mescoursescasino.fr/"+"?q="+encodeURIComponent(q),terms:["casino"]}
+];
+let searchResults = [];
+let basket = {};
+let userLocation = null;
+let nearbyStores = [];
+let toastTimer = null;
+let searchSequence = 0;
+let compareSequence = 0;
+let lastComparison = null;
+try {
+  const saved = JSON.parse(localStorage.getItem("prixo-live-basket") || "{}");
+  if (saved && typeof saved === "object" && !Array.isArray(saved)) basket = saved;
+} catch (_) { basket = {}; }
 
-try{
-  const saved=JSON.parse(localStorage.getItem("prixo-live-basket")||"{}");
-  if(saved&&typeof saved==="object"&&!Array.isArray(saved))basket=saved;
-}catch(e){basket={};}
-
-function esc(v){
-  return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function esc(value) { return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
+function safeUrl(value) { try { const u = new URL(String(value || ""), location.href); return ["https:","http:"].includes(u.protocol) ? u.href : ""; } catch (_) { return ""; } }
+function money(value) { const n = Number(value); return Number.isFinite(n) ? n.toLocaleString("fr-FR", {style:"currency",currency:"EUR"}) : "—"; }
+function dateLabel(value) { if (!value) return "date inconnue"; const d = new Date(value); return Number.isNaN(d.getTime()) ? String(value) : d.toLocaleDateString("fr-FR", {day:"2-digit",month:"short",year:"numeric"}); }
+function daysAgo(value) { const d = new Date(value); return !value || Number.isNaN(d.getTime()) ? Infinity : Math.max(0,(Date.now()-d.getTime())/86400000); }
+function isoDaysAgo(n) { const d = new Date(Date.now()-n*86400000); return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`; }
+function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g," ").trim(); }
+function toast(message) { const el=$("toast"); el.textContent=message; el.classList.add("show"); clearTimeout(toastTimer); toastTimer=setTimeout(()=>el.classList.remove("show"),3400); }
+function showStatus(message,type="") { const el=$("status"); el.textContent=message; el.className="status show"+(type==="error"?" error":""); }
+function clearStatus() { $("status").className="status"; $("status").textContent=""; }
+function saveBasket() { try { localStorage.setItem("prixo-live-basket",JSON.stringify(basket)); } catch (_) { toast("La sauvegarde locale n’est pas disponible dans ce navigateur."); } }
+function basketItems() { return Object.entries(basket).map(([key,v])=>({key,code:String(v.product?.code||key),item:v.product,qty:Math.max(0,Number(v.qty)||0)})).filter(x=>x.item&&x.qty>0); }
+function productCount() { return basketItems().length; }
+function totalQty() { return basketItems().reduce((sum,x)=>sum+x.qty,0); }
+function displayName(p) { const brand=String(p.brand||"").trim(), name=String(p.name||"Produit sans nom").trim(); return brand && !norm(name).includes(norm(brand)) ? `${brand} ${name}` : name; }
+function chosenImage(p) {
+  const f=p.selected_images?.front?.display || {};
+  return safeUrl(f.fr || f.en || f[Object.keys(f)[0]] || p.image_front_url || p.image_front_small_url || p.image_url || "");
 }
-function money(v){
-  return Number.isFinite(Number(v))?Number(v).toLocaleString("fr-FR",{style:"currency",currency:"EUR"}):"—";
+function normalizeProduct(p, source="") {
+  const name=String(p.product_name_fr || p.product_name || p.name || "").trim();
+  const brand=String(p.brands || p.brand || "").split(",")[0].trim();
+  const code=String(p.code || p.ean || "").trim();
+  return {code,name:name || "Produit sans nom",brand,quantity:String(p.quantity||[p.product_quantity,p.product_quantity_unit].filter(Boolean).join(" ")||"").trim(),image:chosenImage(p),category:(Array.isArray(p.categories_tags)?p.categories_tags:[]).slice(0,2).join(", "),source,product_url:code?`https://world.openfoodfacts.org/product/${encodeURIComponent(code)}`:""};
 }
-function dateLabel(value){
-  if(!value)return"Date inconnue";
-  const d=new Date(value);
-  return Number.isNaN(d.getTime())?String(value):d.toLocaleDateString("fr-FR",{day:"2-digit",month:"short",year:"numeric"});
+function productCard(p) {
+  const key=p.code || norm(displayName(p));
+  const image=p.image ? `<img src="${esc(p.image)}" alt="${esc(displayName(p))}" loading="lazy" referrerpolicy="no-referrer" onerror="this.onerror=null;this.style.display='none';this.parentElement.classList.add('no-image');this.parentElement.insertAdjacentHTML('beforeend','<span class=\'product-placeholder\'>📦</span>')">` : `<span class="product-placeholder">📦</span>`;
+  const isAddable=Boolean(p.code);
+  return `<article class="product"><div class="product-image">${image}${p.brand?`<span class="brand-tag">${esc(p.brand)}</span>`:""}</div><div class="product-body"><div class="product-name">${esc(displayName(p))}</div><div class="product-detail">${esc(p.quantity||"Format non renseigné")}${p.code?` · EAN ${esc(p.code)}`:" · Code-barres absent"}</div>${p.source?`<div class="product-detail">Catalogue : ${esc(p.source)}</div>`:""}${p.brand?`<button type="button" class="brand-filter" data-brand="${esc(p.brand)}">Voir tous les produits ${esc(p.brand)} →</button>`:""}<div class="product-foot"><span class="product-price">${isAddable?"Comparer le prix":"EAN absent : comparaison limitée"}</span><button class="add" type="button" data-add="${esc(key)}" aria-label="Ajouter ${esc(displayName(p))}" ${isAddable?"":"disabled title=\"Ce produit n’a pas de code-barres\""}>+</button></div></div></article>`;
 }
-function agoDays(value){
-  if(!value)return Infinity;
-  const d=new Date(value);
-  if(Number.isNaN(d.getTime()))return Infinity;
-  return (Date.now()-d.getTime())/86400000;
+async function fetchJson(url, timeout=14000) {
+  const controller=new AbortController(); const timer=setTimeout(()=>controller.abort(),timeout);
+  try { const response=await fetch(url,{signal:controller.signal,headers:{Accept:"application/json"}}); if(!response.ok) throw new Error(`HTTP ${response.status}`); return await response.json(); }
+  catch(e) { if(e.name==="AbortError") throw new Error("La source met trop de temps à répondre"); if(e instanceof TypeError) throw new Error("La source est momentanément inaccessible depuis le navigateur"); throw e; }
+  finally { clearTimeout(timer); }
 }
-function showStatus(text,type=""){
-  const el=$("status");
-  el.textContent=text;
-  el.className="status show"+(type==="error"?" error":"");
+async function searchOneCatalog(source,query,page=1) {
+  const params=new URLSearchParams({search_terms:query,search_simple:"1",action:"process",json:"1",page:String(page),page_size:"30",fields:SEARCH_FIELDS,sort_by:"unique_scans_n"});
+  return fetchJson(`${source.base}/cgi/search.pl?${params.toString()}`,16000);
 }
-function clearStatus(){
-  $("status").className="status";
-  $("status").textContent="";
+function scoreProduct(p,query) {
+  const q=norm(query), text=norm([p.name,p.brand,p.quantity].join(" "));
+  const tokens=q.split(" ").filter(t=>t.length>1); let score=0;
+  if(norm(p.name)===q) score+=20;
+  if(text.includes(q)) score+=10;
+  for(const token of tokens) if(text.includes(token)) score+=2;
+  if(!p.code) score-=5;
+  if(!p.image) score-=1;
+  return score;
 }
-function toast(text){
-  const el=$("toast");
-  el.textContent=text;
-  el.classList.add("show");
-  clearTimeout(toastTimer);
-  toastTimer=setTimeout(()=>el.classList.remove("show"),2400);
-}
-function saveBasket(){
-  try{localStorage.setItem("prixo-live-basket",JSON.stringify(basket));}
-  catch(e){toast("La sauvegarde locale est indisponible.");}
-}
-function basketItems(){
-  return Object.entries(basket)
-    .map(([code,x])=>({code,item:x.product,qty:x.qty}))
-    .filter(x=>x.item&&x.qty>0);
-}
-function totalQty(){
-  return basketItems().reduce((s,x)=>s+x.qty,0);
-}
-function productCount(){
-  return basketItems().length;
-}
-function cleanProduct(p){
-  return {
-    code:String(p.code||"").trim(),
-    name:String(p.product_name_fr||p.product_name||"Produit sans nom").trim(),
-    brand:String(p.brands||"").split(",")[0].trim(),
-    quantity:String(p.quantity||"").trim(),
-    image:(/^https:\/\//i.test(p.image_front_small_url||"")?p.image_front_small_url:""),
-    categories:Array.isArray(p.categories_tags)?p.categories_tags.slice(0,3):[]
-  };
-}
-function productCard(p){
-  const img=p.image
-    ?`<img src="${esc(p.image)}" alt="" loading="lazy" onerror="this.remove()">`
-    :`<span class="product-placeholder">🛒</span>`;
-  return `<article class="product">
-    <div class="product-image">
-      ${p.brand?`<span class="brand-tag">${esc(p.brand)}</span>`:""}
-      ${img}
-    </div>
-    <div class="product-body">
-      <div class="product-name">${esc(p.name)}</div>
-      <div class="product-detail">${esc(p.quantity||"Format non renseigné")}${p.code?` · ${esc(p.code)}`:""}</div>
-      <div class="product-foot">
-        <span class="product-price">Prix selon relevés<br>disponibles</span>
-        <button class="add" type="button" data-add="${esc(p.code)}" aria-label="Ajouter ${esc(p.name)}">+</button>
-      </div>
-    </div>
-  </article>`;
-}
-async function searchProducts(term){
-  const q=String(term||"").trim();
-  if(!q)return;
-  $("searchBtn").disabled=true;
-  $("searchBtn").textContent="Recherche…";
-  showStatus("Recherche dans le catalogue Open Food Facts…");
-  $("products").innerHTML='<div class="empty"><span class="spinner"></span>Chargement du catalogue…</div>';
-  try{
-    const params=new URLSearchParams({
-      search_terms:q,
-      search_simple:"1",
-      action:"process",
-      json:"1",
-      page_size:"24",
-      fields:"code,product_name,product_name_fr,brands,quantity,image_front_small_url,categories_tags"
-    });
-    const response=await fetch(OFF_SEARCH+"?"+params.toString(),{headers:{Accept:"application/json"}});
-    if(!response.ok)throw new Error("Le catalogue produits est temporairement indisponible (HTTP "+response.status+").");
-    const data=await response.json();
-    results=(data.products||[])
-      .map(cleanProduct)
-      .filter(p=>p.code&&p.name&&p.name!=="Produit sans nom");
-    if(!results.length){
-      $("products").innerHTML='<div class="empty">Aucun résultat trouvé. Essaie une autre recherche ou un code-barres.</div>';
-      showStatus("Aucun produit trouvé. La base collaborative ne contient pas encore tous les produits.");
-    }else{
-      $("products").innerHTML=results.map(productCard).join("");
-      showStatus(results.length+" résultats issus d'Open Food Facts. Ajoute les références souhaitées au panier.");
+async function searchProducts(term,brandFilter="") {
+  const query=String(brandFilter||term||"").trim(); if(!query) return;
+  const seq=++searchSequence; $("searchBtn").disabled=true; $("searchBtn").textContent="Recherche…";
+  $("products").innerHTML='<div class="empty"><span class="spinner"></span><br>Recherche dans plusieurs catalogues de produits…</div>';
+  showStatus("Recherche des références et des photos de face. Une source indisponible ne bloque pas forcément les autres.");
+  const batch=await Promise.allSettled(OFFICES.map(src=>searchOneCatalog(src,query)));
+  if(seq!==searchSequence) return;
+  let found=[]; let successes=0; const sourceFailures=[];
+  batch.forEach((res,i)=>{ if(res.status==="fulfilled"){successes++; const products=Array.isArray(res.value.products)?res.value.products:[]; products.forEach(raw=>{const p=normalizeProduct(raw,OFFICES[i].name); if(p.name && p.name!=="Produit sans nom") found.push(p);});} else sourceFailures.push(OFFICES[i].name); });
+  // Retry common French terms and accent-free spellings if the first pass is sparse.
+  if(found.length<8) {
+    const n=norm(query); const variants=[];
+    if(n && n!==query.toLowerCase()) variants.push(n);
+    const synonymRules=[
+      [/\b(pates|pate|pasta|spaghetti)\b/,["spaghetti","pasta"]],
+      [/\b(lait|milk)\b/,["milk"]], [/\b(riz|rice)\b/,["rice"]],
+      [/\b(yaourt|yaourts|yogourt)\b/,["yogurt"]], [/\b(huile d olive|huile olive)\b/,["olive oil"]],
+      [/\b(lessive|detergent)\b/,["laundry detergent"]], [/\b(dentifrice)\b/,["toothpaste"]],
+      [/\b(shampooing|shampoing)\b/,["shampoo"]], [/\b(banane|bananes)\b/,["banana"]],
+      [/\b(cafe|coffee)\b/,["coffee"]], [/\b(chocolat)\b/,["chocolate"]],
+      [/\b(croquettes)\b/,["pet food"]]
+    ];
+    for(const [re,alts] of synonymRules){if(re.test(n)){variants.push(...alts);break;}}
+    const uniqueVariants=[...new Set(variants)].filter(v=>v && norm(v)!==norm(query)).slice(0,2);
+    for(const v of uniqueVariants){
+      const retrySources=OFFICES.slice(0, (norm(query).includes("croquette")?4:2));
+      const retry=await Promise.allSettled(retrySources.map(src=>searchOneCatalog(src,v,1)));
+      if(seq!==searchSequence)return;
+      retry.forEach((res,i)=>{if(res.status==="fulfilled"&&Array.isArray(res.value.products))res.value.products.forEach(raw=>found.push(normalizeProduct(raw,retrySources[i].name)));});
+      if(found.length>=18)break;
     }
-    $("catalogCount").textContent="Open Food Facts";
-  }catch(err){
-    $("products").innerHTML='<div class="empty">La recherche n’a pas abouti.</div>';
-    showStatus((err.message||"Erreur réseau.")+" Vérifie ta connexion et réessaie.","error");
-  }finally{
-    $("searchBtn").disabled=false;
-    $("searchBtn").textContent="Rechercher";
   }
-}
-function addProduct(code){
-  const p=results.find(x=>x.code===String(code));
-  if(!p)return;
-  if(basket[code])basket[code].qty=Math.min(99,basket[code].qty+1);
-  else basket[code]={product:p,qty:1};
-  saveBasket();
-  renderBasket();
-  toast(p.name+" ajouté au panier");
-}
-function changeQty(code,delta){
-  if(!basket[code])return;
-  const q=basket[code].qty+delta;
-  if(q<=0)delete basket[code];
-  else basket[code].qty=Math.min(99,q);
-  saveBasket();
-  renderBasket();
-}
-function renderBasket(){
-  const items=basketItems();
-  const qty=totalQty();
-  $("basketCount").textContent=qty+" article"+(qty>1?"s":"");
-  $("heroCount").textContent=qty+" article"+(qty>1?"s":"");
-  if(!items.length){
-    $("basketItems").innerHTML='<div class="basket-empty"><div class="emoji">🛍️</div><strong>Votre panier est vide</strong><p>Recherchez vos produits et ajoutez-les ici pour comparer les prix.</p></div>';
-  }else{
-    $("basketItems").innerHTML=items.map(({code,item:p,qty})=>`
-      <div class="basket-item">
-        <div class="basket-emoji">${p.image?`<img src="${esc(p.image)}" alt="" style="width:30px;height:30px;object-fit:contain" onerror="this.outerHTML='🛒'">`:"🛒"}</div>
-        <div>
-          <div class="basket-name">${esc(p.name)}</div>
-          <div class="basket-meta">${esc(p.quantity||p.brand||"Code-barres "+code)}</div>
-          <div class="qty">
-            <button data-qty="${esc(code)}" data-delta="-1" aria-label="Retirer un article">−</button>
-            <span>${qty}</span>
-            <button data-qty="${esc(code)}" data-delta="1" aria-label="Ajouter un article">+</button>
-          </div>
-        </div>
-        <div class="basket-line-price">—<div class="basket-meta">prix à comparer</div></div>
-      </div>`).join("");
+  const seen=new Set();
+  found=found.filter(p=>{if(!p.code)return true; if(seen.has(p.code))return false; seen.add(p.code);return true;});
+  found.sort((a,b)=>scoreProduct(b,query)-scoreProduct(a,query));
+  // Explicit brand button filters by brand after a broad enough query search.
+  if(brandFilter) { const brandNorm=norm(brandFilter); const matching=found.filter(p=>norm(p.brand).includes(brandNorm)); if(matching.length)found=matching; }
+  searchResults=found.slice(0,48);
+  if(searchResults.length) {
+    $("products").innerHTML=searchResults.map(productCard).join("");
+    $("catalogCount").textContent=`${searchResults.length} produits`;
+    showStatus(`${searchResults.length} produit(s) trouvé(s)${successes?` dans ${successes} catalogue(s) accessible(s)`:""}. Photos choisies en priorité sur la face du produit.`);
+  } else {
+    $("products").innerHTML='<div class="empty">Aucun produit trouvé pour cette recherche. Essaie un nom plus court (ex. « spaghetti », « lait », « lessive ») ou recherche le code-barres.</div>';
+    $("catalogCount").textContent="0 résultat";
+    showStatus(successes?"Les catalogues ont répondu, mais aucun produit correspondant n’a été trouvé.":`Les catalogues n’ont pas répondu. Vérifie ta connexion ou réessaie plus tard. Sources en échec : ${sourceFailures.join(", ")||"catalogues produits"}.`,successes?"":"error");
   }
-  $("basketSubtotal").textContent="À comparer";
-  $("basketTotal").textContent="—";
-  $("bestTotal").textContent="—";
-  renderComparisonMessage();
+  $("searchBtn").disabled=false; $("searchBtn").textContent="Rechercher";
 }
-function renderComparisonMessage(){
-  if(!productCount()){
-    $("stores").innerHTML='<div class="empty">Votre comparatif apparaîtra ici après ajout d’articles.</div>';
-    $("compareDescription").textContent="Ajoutez des produits au panier, puis lancez la comparaison.";
-  }
+function addProduct(key) {
+  const p=searchResults.find(x=>(x.code||norm(displayName(x)))===key);
+  if(!p) { toast("Produit introuvable dans les résultats actuels. Recommence la recherche."); return; }
+  if(!p.code) { toast("Ce produit n’a pas de code-barres EAN : il ne peut pas être comparé exactement."); return; }
+  if(!basket[p.code]) basket[p.code]={product:p,qty:0};
+  basket[p.code].qty++; saveBasket(); renderBasket(); toast(`${displayName(p)} ajouté au panier.`);
 }
-function storeKey(rec){
-  const loc=rec.location||{};
-  if(loc.id!=null)return "id:"+loc.id;
-  if(loc.osm_type&&loc.osm_id)return "osm:"+loc.osm_type+":"+loc.osm_id;
-  if(loc.website_url)return "url:"+loc.website_url;
-  return "name:"+[loc.osm_name||loc.osm_brand||loc.name||"Magasin",loc.osm_address_city||""].join("|");
+function changeQty(code,delta) {
+  if(!basket[code]) return; basket[code].qty=(Number(basket[code].qty)||0)+delta;
+  if(basket[code].qty<=0) delete basket[code]; saveBasket(); renderBasket();
 }
-function storeLabel(loc){
-  if(!loc)return"Magasin non renseigné";
-  if(loc.type==="ONLINE"){
-    try{return new URL(loc.website_url).hostname.replace(/^www\./,"")||"Magasin en ligne";}
-    catch(e){return"Magasin en ligne";}
-  }
-  return loc.osm_name||loc.osm_brand||loc.name||"Magasin non renseigné";
+function renderBasket() {
+  const items=basketItems(); const q=totalQty();
+  $("basketCount").textContent=`${q} article${q>1?"s":""}`; $("heroCount").textContent=`${q} article${q>1?"s":""}`;
+  $("basketSubtotal").textContent="Prix à comparer"; $("bestTotal").textContent="—"; $("basketTotal").textContent="—";
+  if(!items.length) { $("basketItems").innerHTML='<div class="basket-empty"><div class="emoji">🛒</div><strong>Ton panier est vide</strong><p>Recherche des produits puis clique sur + pour commencer.</p></div>'; return; }
+  $("basketItems").innerHTML=items.map(({code,item,qty})=>`<div class="basket-item"><div class="basket-emoji">${item.image?`<img src="${esc(item.image)}" alt="" style="width:38px;height:38px;object-fit:contain;border-radius:8px;background:#fff" onerror="this.style.display='none'">`:"📦"}</div><div><div class="basket-name">${esc(displayName(item))}</div><div class="basket-meta">${esc(item.quantity||"Format inconnu")} · EAN ${esc(item.code||code)}</div><div class="qty"><button type="button" data-qty="${esc(code)}" data-delta="-1" aria-label="Enlever un article">−</button><span>${qty}</span><button type="button" data-qty="${esc(code)}" data-delta="1" aria-label="Ajouter un article">+</button></div></div><div class="basket-line-price">—</div></div>`).join("");
 }
-async function getPricesForProduct(code){
-  const params=new URLSearchParams({
-    product_code:String(code),
-    order_by:"-date",
-    size:"100",
-    page:"1"
+function haversine(lat1,lon1,lat2,lon2) { const R=6371, rad=x=>x*Math.PI/180, dLat=rad(lat2-lat1),dLon=rad(lon2-lon1); const a=Math.sin(dLat/2)**2+Math.cos(rad(lat1))*Math.cos(rad(lat2))*Math.sin(dLon/2)**2; return 2*R*Math.asin(Math.sqrt(a)); }
+function retailerFor(value) { const n=norm(value); return RETAILERS.find(r=>r.terms.some(t=>n.includes(norm(t))))||null; }
+function mapsDirections(lat,lon,label="") { const dest=Number.isFinite(Number(lat))&&Number.isFinite(Number(lon))?`${lat},${lon}`:label; return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(dest)}&travelmode=driving`; }
+function link(rel,href,label,primary=false) { const u=safeUrl(href); return u?`<a class="action-link${primary?" primary-action":""}" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`:""; }
+function retailerLinks(retailer,query="") { if(!retailer)return ""; let html=link("site",retailer.search(query||"courses"),"Chercher le produit"); if(retailer.drive && retailer.key!=="lidl"&&retailer.key!=="aldi")html+=link("drive",retailer.drive,"Ouvrir le Drive",true); else html+=link("site",retailer.site,"Site officiel"); return `<div class="store-actions">${html}</div>`; }
+function displayStoreName(location) { return String(location?.osm_name||location?.osm_brand||location?.osm_display_name||"Magasin sans nom").split(",")[0].trim(); }
+function locationCountry(location) { return norm([location?.osm_address_country_code,location?.osm_address_country].filter(Boolean).join(" ")); }
+function usablePrice(record) { const p=Number(record.price); return Number.isFinite(p)&&p>=0&&String(record.currency||"EUR").toUpperCase()==="EUR"&&record.location; }
+async function getPricesForProduct(item) {
+  const q=new URLSearchParams({product_code:String(item.code),type:"PRODUCT",currency:"EUR",date__gte:isoDaysAgo(PRICE_DAYS),duplicate_of__isnull:"true",size:"100",order_by:"-date"});
+  if(userLocation){q.set("lat",String(userLocation.lat));q.set("lon",String(userLocation.lon));q.set("radius_km","50");}
+  const data=await fetchJson(`${PRICE_API}?${q.toString()}`,20000);
+  return (Array.isArray(data.items)?data.items:[]).filter(usablePrice).map(r=>({record:r,location:r.location,price:Number(r.price),date:r.date||r.created||"",retailer:retailerFor([r.location.osm_brand,r.location.osm_name,r.location.osm_display_name].join(" ")),name:displayStoreName(r.location)})).filter(o=>{
+    if(!Number.isFinite(o.price)||o.price<0)return false;
+    if(userLocation){const lat=Number(o.location.osm_lat),lon=Number(o.location.osm_lon);if(Number.isFinite(lat)&&Number.isFinite(lon)&&Math.abs(lat)<=90&&Math.abs(lon)<=180&&haversine(userLocation.lat,userLocation.lon,lat,lon)>50.5)return false;}
+    else {const country=locationCountry(o.location);if(country && !country.includes("france")&&!country.split(" ").includes("fr"))return false;}
+    return true;
   });
-  if(userLocation){
-    params.set("lat",String(userLocation.lat));
-    params.set("lon",String(userLocation.lon));
-    params.set("radius_km","25");
-  }
-  const response=await fetch(PRICES_API+"?"+params.toString(),{headers:{Accept:"application/json"}});
-  if(!response.ok)throw new Error("Open Prices indisponible (HTTP "+response.status+")");
-  const data=await response.json();
-  const list=Array.isArray(data.items)?data.items:(Array.isArray(data.results)?data.results:[]);
-  const latest=new Map();
-  for(const r of list){
-    const amount=Number(r.price);
-    if(!Number.isFinite(amount)||amount<=0)continue;
-    const currency=String(r.currency||"EUR").toUpperCase();
-    if(currency!=="EUR")continue;
-    const loc=r.location||{};
-    const key=storeKey(r);
-    if(key==="name:Magasin non renseigné|")continue;
-    const item={
-      code:String(code),
-      price:amount,
-      currency,
-      date:r.date||r.created||null,
-      loc,
-      key,
-      name:storeLabel(loc),
-      city:loc.osm_address_city||"",
-      website:loc.website_url||"",
-      recent:agoDays(r.date||r.created)<=RECENT_DAYS,
-      discounted:Boolean(r.price_is_discounted),
-      sourceId:r.id
-    };
-    const prev=latest.get(key);
-    if(!prev||String(item.date||"")>String(prev.date||""))latest.set(key,item);
-  }
-  return {prices:[...latest.values()],total:Number(data.total||list.length)};
 }
-async function mapLimit(items,limit,fn){
-  const out=new Array(items.length);
-  let next=0;
-  async function worker(){
-    while(true){
-      const index=next++;
-      if(index>=items.length)return;
-      try{out[index]=await fn(items[index],index);}
-      catch(e){out[index]={error:e};}
-    }
-  }
-  await Promise.all(Array.from({length:Math.min(limit,items.length)},worker));
-  return out;
-}
-async function compareBasket(){
-  const items=basketItems();
+async function mapLimit(items,limit,fn) { const out=new Array(items.length);let next=0;const workers=Array.from({length:Math.min(limit,items.length)},async()=>{while(true){const i=next++;if(i>=items.length)return;try{out[i]=await fn(items[i],i);}catch(e){out[i]={error:e};}}});await Promise.all(workers);return out; }
+function betterOffer(current,candidate) { if(!current)return true; const a=new Date(current.date||0).getTime(),b=new Date(candidate.date||0).getTime();return b>a; }
+async function compareBasket() {
+  const id=++compareSequence;const items=basketItems();
   if(!items.length){toast("Ajoute au moins un produit avant de comparer.");return;}
-  $("compareBtn").disabled=true;
-  $("compareBtn").innerHTML='<span class="spinner"></span>Comparaison…';
-  $("stores").innerHTML='<div class="empty"><span class="spinner"></span>Recherche de prix relevés dans Open Prices…</div>';
-  $("compareDescription").textContent=userLocation
-    ?"Recherche limitée aux relevés à environ 25 km de votre position (selon la couverture des données)."
-    :"Recherche parmi les relevés disponibles, sans filtre géographique. Activez « Autour de moi » pour tenter de limiter les résultats à votre zone.";
-  try{
-    const lookups=await mapLimit(items,4,async entry=>({entry,...await getPricesForProduct(entry.code)}));
-    productPrices={};
-    for(const r of lookups)productPrices[r.entry.code]=r.error?[]:r.prices;
-    const stores=new Map();
-    for(const {entry} of lookups){
-      for(const price of (productPrices[entry.code]||[])){
-        if(!price.recent)continue;
-        if(!stores.has(price.key)){
-          stores.set(price.key,{
-            key:price.key,name:price.name,city:price.city,
-            website:price.website,prices:{},lastDate:price.date
-          });
-        }
-        const st=stores.get(price.key);
-        st.prices[entry.code]=price;
-        if(String(price.date||"")>String(st.lastDate||""))st.lastDate=price.date;
-      }
-    }
-    const summaries=[...stores.values()].map(s=>{
-      const found=items.filter(({code})=>s.prices[code]);
-      const total=found.reduce((sum,entry)=>sum+s.prices[entry.code].price*entry.qty,0);
-      return {...s,total,covered:found.length,complete:found.length===items.length};
-    }).sort((a,b)=>Number(b.complete)-Number(a.complete)||b.covered-a.covered||a.total-b.total);
-    const complete=summaries.filter(s=>s.complete);
-    $("bestTotal").textContent=complete.length?money(complete[0].total):"Pas assez de données";
-    $("basketTotal").textContent=complete.length?money(complete[0].total):"—";
-    $("basketSubtotal").textContent=complete.length?money(complete[0].total):"Partiel";
-    if(!summaries.length){
-      $("stores").innerHTML='<div class="empty">Aucun relevé de prix récent n’a été trouvé pour les produits de votre panier dans cette zone. Essayez sans filtre géographique ou ajoutez des relevés sur Open Prices.</div>';
-    }else{
-      const max=Math.max(...summaries.map(x=>x.total),1);
-      $("stores").innerHTML=summaries.slice(0,30).map((s,index)=>{
-        const width=Math.max(5,s.total/max*100);
-        const label=s.complete?money(s.total):"—";
-        const url=s.website&&/^https:\/\//i.test(s.website)
-          ?`<a class="data-link" target="_blank" rel="noopener" href="${esc(s.website)}">Site du magasin ↗</a>`:"";
-        return `<article class="store-card">
-          <div class="store-top">
-            <div class="store-icon">${s.website?"🌐":"🏬"}</div>
-            <div class="store-middle">
-              <div class="store-name">${esc(s.name)}</div>
-              <div class="store-detail">${esc(s.city||"Localisation non précisée")} · ${s.covered}/${items.length} produits avec un relevé récent<br>${s.lastDate?"Relevé le "+esc(dateLabel(s.lastDate)):"Date inconnue"}</div>
-              ${s.complete&&index===0?'<span class="best-label">MEILLEUR PANIER COMPLET</span>':""}${url}
-            </div>
-            <div class="store-total">${label}<small>${s.complete?"panier complet":"total non calculable"}</small></div>
-          </div>
-          <div class="store-bar"><div style="width:${width}%"></div></div>
-          <div class="store-footer"><span>${s.complete?"Tous les articles comparés":"Couverture partielle : "+s.covered+" sur "+items.length}</span><span>${s.complete?"Relevés récents":"Prix manquants ignorés"}</span></div>
-        </article>`;
-      }).join("");
-      if(!complete.length){
-        $("stores").insertAdjacentHTML("afterbegin",'<div class="status show">Aucun magasin ne dispose d’un relevé récent pour tous les produits du panier. Les résultats ci-dessous sont partiels et ne permettent pas de désigner un panier complet moins cher.</div>');
-      }
-    }
-    const perItemHTML=items.map(({code,item,qty})=>{
-      const choices=(productPrices[code]||[]).filter(p=>p.recent).sort((a,b)=>a.price-b.price);
-      if(!choices.length){
-        return `<article class="store-card"><div class="store-top"><div class="store-icon">🔎</div><div class="store-middle"><div class="store-name">${esc(item.name)}</div><div class="store-detail">${esc(item.quantity||"Format non renseigné")} · quantité : ${qty}</div></div><div class="store-total">—<small>aucun relevé récent</small></div></div></article>`;
-      }
-      const offers=choices.slice(0,3).map(p=>`<div class="store-detail" style="display:flex;justify-content:space-between;gap:8px"><span>${esc(p.name)}${p.city?" · "+esc(p.city):""}</span><b style="color:var(--green);white-space:nowrap">${money(p.price)}${p.date?" · "+esc(dateLabel(p.date)):""}</b></div>`).join("");
-      const best=choices[0];
-      return `<article class="store-card"><div class="store-top"><div class="store-icon">${item.image?"📦":"🛒"}</div><div class="store-middle"><div class="store-name">${esc(item.name)}</div><div class="store-detail">${esc(item.quantity||"Format non renseigné")} · quantité : ${qty}</div></div><div class="store-total">${money(best.price)}<small>meilleur relevé récent</small></div></div><div style="margin-top:10px;display:grid;gap:5px">${offers}</div></article>`;
-    }).join("");
-    $("stores").insertAdjacentHTML("beforeend",`<div style="margin:22px 0 10px;font-size:10px;letter-spacing:1.5px;font-weight:900;color:var(--green);text-transform:uppercase">Prix relevés par article</div>${perItemHTML}`);
-    const errors=lookups.filter(x=>x.error).length;
-    if(errors)toast("Comparaison terminée avec "+errors+" source(s) indisponible(s).");
-    else toast("Comparaison actualisée à partir des relevés disponibles.");
-    if(userLocation){
-      $("compareDescription").textContent="Relevés demandés dans un rayon d’environ 25 km. Les données manquantes ne signifient pas que le magasin ne vend pas le produit.";
-    }
-  }catch(err){
-    $("stores").innerHTML='<div class="empty">Impossible de charger les données de prix. Réessayez plus tard.</div>';
-    toast(err.message||"Erreur de comparaison");
-  }finally{
-    $("compareBtn").disabled=false;
-    $("compareBtn").textContent="Comparer les prix →";
-  }
+  const withCode=items.filter(x=>/^\d{8,14}$/.test(x.item.code||x.code));
+  $("compareBtn").disabled=true;$("compareBtn").innerHTML='<span class="spinner"></span>Comparaison…';$("stores").innerHTML='<div class="empty"><span class="spinner"></span><br>Recherche des relevés de prix par code-barres…</div>';
+  $("compareDescription").textContent=userLocation?"Recherche les relevés par code-barres dans un rayon de 50 km ; les prix restent datés.":"Recherche les relevés disponibles en France. Active la localisation pour limiter la comparaison aux magasins proches.";
+  if(!withCode.length){$("stores").innerHTML='<div class="empty">Les produits du panier n’ont pas de code-barres EAN valide. Recherche une fiche produit avec EAN pour comparer exactement le même article.</div>';$("compareBtn").disabled=false;$("compareBtn").textContent="Comparer les prix →";return;}
+  const rows=await mapLimit(withCode,4,async item=>({item,offers:await getPricesForProduct(item)}));
+  if(id!==compareSequence)return;
+  const failed=rows.filter(r=>r.error).length;
+  const stores=new Map();
+  rows.forEach((row)=>{
+    if(row.error)return;
+    row.offers.forEach(o=>{
+      const loc=o.location;const key=String(loc.id||`${loc.osm_type||""}-${loc.osm_id||""}-${o.name}`);
+      if(!stores.has(key)) stores.set(key,{key,name:o.name,retailer:o.retailer,location:loc,offers:new Map(),distance_km:null});
+      const s=stores.get(key); const code=row.item.item.code||row.item.code;
+      const offer={code,product_name:displayName(row.item.item),brand:row.item.item.brand,quantity:row.item.item.quantity,qty:row.item.qty,price:o.price,date:o.date,location:loc,retailer:o.retailer?.label||o.retailer?.key||loc.osm_brand||"Enseigne non identifiée",store_name:o.name,is_discounted:Boolean(o.record.price_is_discounted),price_without_discount:o.record.price_without_discount,product_url:o.retailer?o.retailer.search(displayName(row.item.item)):loc.website_url||""};
+      const prev=s.offers.get(code);if(betterOffer(prev,offer))s.offers.set(code,offer);
+    });
+  });
+  const storeList=Array.from(stores.values()).map(s=>{
+    const lat=Number(s.location.osm_lat),lon=Number(s.location.osm_lon);if(userLocation&&Number.isFinite(lat)&&Number.isFinite(lon))s.distance_km=haversine(userLocation.lat,userLocation.lon,lat,lon);
+    s.covered_count=s.offers.size;s.complete=s.covered_count===items.length;s.total=items.reduce((sum,it)=>sum+(s.offers.get(it.item.code||it.code)?.price||0)*it.qty,0);s.latestDate=Array.from(s.offers.values()).map(o=>o.date).filter(Boolean).sort().pop()||"";
+    s.retailerName=s.retailer?.label||s.location.osm_brand||s.name||"Enseigne non identifiée";
+    return s;
+  }).filter(s=>!userLocation||s.distance_km===null||s.distance_km<=50.5);
+  storeList.sort((a,b)=>Number(b.complete)-Number(a.complete)||(a.complete?a.total-b.total:b.covered_count-a.covered_count)||(a.distance_km??9999)-(b.distance_km??9999));
+  const complete=storeList.filter(s=>s.complete).sort((a,b)=>a.total-b.total);
+  const best=complete[0];
+  $("bestTotal").textContent=best?money(best.total):"Pas de panier complet";$("basketTotal").textContent=best?money(best.total):"—";$("basketSubtotal").textContent=best?money(best.total):"Prix partiels";
+  const priceByCode=new Map();rows.forEach(row=>{if(row.error)return;const code=row.item.item.code||row.item.code;row.offers.forEach(o=>{const item={price:o.price,date:o.date,store_name:o.name,retailer:o.retailer?.label||o.location.osm_brand||o.name,location:o.location,chain:o.retailer};const arr=priceByCode.get(code)||[];arr.push(item);priceByCode.set(code,arr);});});
+  for(const arr of priceByCode.values())arr.sort((a,b)=>a.price-b.price||new Date(b.date||0)-new Date(a.date||0));
+  let html=`<div class="status show">${userLocation?"Prix de relevés dans un rayon maximal de 50 km.":"Prix de relevés identifiés en France ; active la localisation pour connaître les magasins proches."} Les relevés peuvent dater de plusieurs mois. La comparaison ne constitue pas une garantie du prix affiché aujourd’hui en rayon. ${failed?`${failed} recherche(s) de prix n’ont pas abouti ; réessaie plus tard.`:""}</div>`;
+  if(best)html+=`<div class="store-card" style="border:2px solid var(--green)"><div class="store-top"><div class="store-icon">🏆</div><div class="store-middle"><div class="store-name">Meilleur panier complet : ${esc(best.retailerName)}</div><div class="store-detail">${esc(best.name)}${best.distance_km!=null?` · ${best.distance_km.toLocaleString("fr-FR",{maximumFractionDigits:1})} km`:""}<br>Tous les ${items.length} articles ont un relevé de prix.</div><span class="best-label">MEILLEUR TOTAL DISPONIBLE</span></div><div class="store-total">${money(best.total)}<small>prix relevés datés</small></div></div>${storeActions(best)}</div>`;
+  else html+='<div class="empty">Aucun magasin ne dispose d’un prix pour tous les articles du panier. Les totaux incomplets ne sont pas classés comme meilleur panier.</div>';
+  if(storeList.length){html+='<div class="section-kicker">Classement des magasins</div>';html+=storeList.slice(0,35).map((s,i)=>renderCompareStore(s,i,items.length)).join("");}
+  else html+='<div class="empty">Aucun relevé de prix n’a été trouvé pour ce panier. Essaie avec un produit ayant un code-barres reconnu ou augmente temporairement ton rayon de comparaison.</div>';
+  html+='<div class="section-kicker">Meilleur prix par article</div>';
+  html+=items.map(it=>{
+    const code=it.item.code||it.code;const arr=priceByCode.get(code)||[];const bestItem=arr[0];
+    if(!bestItem)return `<article class="store-card"><div class="store-top"><div class="store-icon">📦</div><div class="store-middle"><div class="store-name">${esc(displayName(it.item))}</div><div class="store-detail">EAN ${esc(code)} · aucun prix trouvé dans les sources disponibles</div></div><div class="store-total">—<small>pas de relevé</small></div></div>${retailerSearchLinks(displayName(it.item))}</article>`;
+    return `<article class="store-card"><div class="store-top"><div class="store-icon">📦</div><div class="store-middle"><div class="store-name">${esc(displayName(it.item))}</div><div class="store-detail">${esc(it.item.quantity||"")} · EAN ${esc(code)}<br>${esc(bestItem.store_name)} · relevé du ${esc(dateLabel(bestItem.date))}</div></div><div class="store-total">${money(bestItem.price)}<small>${esc(bestItem.retailer)}</small></div></div><div class="store-detail" style="margin-top:8px">Pour ${it.qty} article(s) : ${money(bestItem.price*it.qty)}</div>${offerChoices(arr.slice(0,5),displayName(it.item))}${retailerSearchLinks(displayName(it.item))}</article>`;
+  }).join("");
+  html+='<div class="section-kicker">Rechercher dans les enseignes</div><p class="store-detail">Pour les enseignes sans relevé de prix disponible, ouvre leur site officiel pour vérifier le prix courant et sélectionner le magasin ou le Drive.</p>'+retailerSearchLinks(items.map(x=>displayName(x.item)).join(" ; "));
+  $("stores").innerHTML=html;
+  if(!userLocation)$("compareDescription").textContent="Les relevés affichés ne prouvent pas le prix actuel en magasin. Active « Autour de moi » pour restreindre la recherche aux magasins proches.";
+  else $("compareDescription").textContent=`Comparaison des ${items.length} article(s) par EAN dans un rayon de 50 km. Prix avec date et magasin associés.`;
+  toast(best?`Comparaison terminée. Meilleur panier observé : ${money(best.total)}.`:"Comparaison terminée : aucun panier complet vérifiable.");
+  $("compareBtn").disabled=false;$("compareBtn").textContent="Comparer les prix →";lastComparison={storeList,best,items};
 }
-function requestLocation(){
+function storeActions(s) {
+  const loc=s.location||{};const lat=Number(loc.osm_lat),lon=Number(loc.osm_lon);const coordinates=Number.isFinite(lat)&&Number.isFinite(lon)&&Math.abs(lat)<=90&&Math.abs(lon)<=180;
+  let html='<div class="store-actions">';
+  if(coordinates)html+=link("directions",mapsDirections(lat,lon,s.name),"Itinéraire");
+  if(s.retailer)html+=link("drive",s.retailer.drive,"Choisir un Drive",true)+link("site",s.retailer.search("courses"),"Site et catalogue");
+  else if(loc.website_url)html+=link("site",loc.website_url,"Site du magasin",true);
+  return html+'</div>';
+}
+function renderCompareStore(s,index,totalItems) {
+  const total=s.complete?money(s.total):"—";const percent=Math.round(100*s.covered_count/Math.max(1,totalItems));
+  const offers=Array.from(s.offers.values()).map(o=>`<div class="store-detail price-line"><span>${esc(o.product_name)} × ${o.qty}</span><b>${money(o.price)}${o.is_discounted?" · promo":""}</b></div>`).join("");
+  const age=daysAgo(s.latestDate);const freshness=age<=30?"Relevé récent":`Relevé le ${dateLabel(s.latestDate)}`;
+  return `<article class="store-card"><div class="store-top"><div class="store-icon">${index===0&&s.complete?"🏆":"🛒"}</div><div class="store-middle"><div class="store-name">${esc(s.name)} <span class="muted">· ${esc(s.retailerName)}</span></div><div class="store-detail">${esc([s.location.osm_address_city,s.location.osm_address_postcode].filter(Boolean).join(" ")||"Adresse non renseignée")}${s.distance_km!=null?` · ${s.distance_km.toLocaleString("fr-FR",{maximumFractionDigits:1})} km`:""}<br>${s.covered_count}/${totalItems} article(s) avec prix · ${esc(freshness)}</div>${s.complete&&index===0?'<span class="best-label">MEILLEUR PANIER COMPLET</span>':""}</div><div class="store-total">${total}<small>${s.complete?"total complet":"total non comparable"}</small></div></div><div class="store-bar"><div style="width:${percent}%"></div></div><div class="store-footer"><span>${s.complete?"Tous les prix disponibles":"Prix manquants : "+(totalItems-s.covered_count)}</span><span>${money(s.total)} partiel</span></div>${storeActions(s)}<div style="margin-top:9px">${offers}</div></article>`;
+}
+function offerChoices(offers,query) {
+  return `<div style="display:grid;gap:6px;margin-top:10px">${offers.map(o=>`<div class="store-detail price-line"><span><b style="color:var(--ink)">${esc(o.retailer)}</b> · ${esc(o.store_name)}<br>${esc(dateLabel(o.date))}</span><b>${money(o.price)}</b></div>${(Math.abs(Number(o.location.osm_lat))<=90&&Math.abs(Number(o.location.osm_lon))<=180)?`<div class="store-actions">${link("route",mapsDirections(o.location.osm_lat,o.location.osm_lon,o.store_name),"Itinéraire")}${o.chain?link("order",o.chain.search(query),"Vérifier sur le site",true):""}</div>`:""}`).join("")}</div>`;
+}
+function retailerSearchLinks(query) { return `<div class="retailer-links">${RETAILERS.slice(0,7).map(r=>link(r.key,r.search(query),r.label)).join("")}</div>`; }
+async function getNearbyStores() {
+  if(!userLocation)return;
+  $("nearbyStores").innerHTML='<div class="empty"><span class="spinner"></span><br>Recherche des magasins proches…</div>';
+  const {lat,lon}=userLocation;
+  const query=`[out:json][timeout:25];(node[shop~"^(supermarket|convenience)$"](around:30000,${lat},${lon});way[shop~"^(supermarket|convenience)$"](around:30000,${lat},${lon});relation[shop~"^(supermarket|convenience)$"](around:30000,${lat},${lon}););out center tags;`;
+  const endpoints=["https://overpass-api.de/api/interpreter","https://overpass.kumi.systems/api/interpreter"];
+  let data=null,lastErr=null;
+  for(const endpoint of endpoints){try{data=await fetchJson(endpoint+"?data="+encodeURIComponent(query),24000);if(data&&Array.isArray(data.elements))break;}catch(e){lastErr=e;}}
+  if(!data||!Array.isArray(data.elements)){$("nearbyStores").innerHTML=`<div class="empty">Impossible de charger les magasins à proximité pour le moment. Réessaie plus tard. ${esc(lastErr?.message||"")}</div>`;return;}
+  const unique=new Map();
+  data.elements.forEach(el=>{
+    const tags=el.tags||{};const lat0=Number(el.lat??el.center?.lat),lon0=Number(el.lon??el.center?.lon);if(!Number.isFinite(lat0)||!Number.isFinite(lon0))return;
+    const name=tags.name||tags.brand||tags.operator||"Supermarché";const retailer=retailerFor([tags.brand,tags.name,tags.operator].join(" "));
+    const key=String(el.type)+"-"+String(el.id);unique.set(key,{name,retailer:retailer?.label||tags.brand||"Supermarché",chain:retailer,lat:lat0,lon:lon0,distance:haversine(lat,lon,lat0,lon0),address:[tags["addr:street"],tags["addr:housenumber"],tags["addr:postcode"],tags["addr:city"]].filter(Boolean).join(" "),website:safeUrl(tags.website||tags["contact:website"]||"")});
+  });
+  nearbyStores=Array.from(unique.values()).sort((a,b)=>a.distance-b.distance).slice(0,30);
+  if(!nearbyStores.length){$("nearbyStores").innerHTML='<div class="empty">Aucun supermarché n’a été trouvé dans un rayon de 30 km par la carte participative.</div>';return;}
+  $("nearbyStores").innerHTML=nearbyStores.map(s=>`<article class="store-card"><div class="store-top"><div class="store-icon">🏬</div><div class="store-middle"><div class="store-name">${esc(s.name)}</div><div class="store-detail">${esc(s.retailer)} · ${s.distance.toLocaleString("fr-FR",{maximumFractionDigits:1})} km${s.address?`<br>${esc(s.address)}`:""}</div></div></div><div class="store-actions">${link("directions",mapsDirections(s.lat,s.lon,s.name),"Itinéraire",true)}${s.chain?link("drive",s.chain.drive,"Ouvrir le Drive"):""}${s.website?link("website",s.website,"Site du magasin"):""}</div></article>`).join("");
+  $("nearbyTitle").textContent=`Magasins à proximité (${nearbyStores.length})`;
+}
+function requestLocation() {
   if(!navigator.geolocation){toast("La géolocalisation n’est pas disponible dans ce navigateur.");return;}
-  $("locationBtn").disabled=true;
-  $("locationBtn").textContent="Localisation…";
-  navigator.geolocation.getCurrentPosition(pos=>{
-    userLocation={lat:pos.coords.latitude,lon:pos.coords.longitude};
-    $("locationBtn").textContent="⌖ Position activée";
-    $("locationBtn").disabled=false;
-    toast("Position obtenue. La prochaine comparaison tentera un filtre de 25 km.");
-  },err=>{
-    $("locationBtn").textContent="⌖ Autour de moi";
-    $("locationBtn").disabled=false;
-    toast(err.code===1?"Autorisez la localisation dans le navigateur.":"Position indisponible. Réessayez.");
-  },{enableHighAccuracy:true,timeout:12000,maximumAge:60000});
+  $("locationBtn").disabled=true;$("locationBtn").textContent="Localisation…";
+  navigator.geolocation.getCurrentPosition(async pos=>{
+    userLocation={lat:pos.coords.latitude,lon:pos.coords.longitude};$("locationBtn").textContent="⌖ Position activée";$("locationBtn").disabled=false;
+    $("nearbyPanel").style.display="block";await getNearbyStores();toast("Position activée : magasins et prix recherchés à proximité.");
+  },err=>{$("locationBtn").textContent="⌖ Autour de moi";$("locationBtn").disabled=false;toast(err.code===1?"Autorise la localisation dans les réglages du navigateur.":"Position indisponible. Autorise la localisation puis réessaie.");},{enableHighAccuracy:true,timeout:15000,maximumAge:120000});
 }
-$("searchForm").addEventListener("submit",e=>{
-  e.preventDefault();
-  searchProducts($("search").value);
-});
-$("suggestions").addEventListener("click",e=>{
-  const b=e.target.closest("[data-query]");
-  if(!b)return;
-  $("search").value=b.dataset.query;
-  searchProducts(b.dataset.query);
-});
-$("products").addEventListener("click",e=>{
-  const b=e.target.closest("[data-add]");
-  if(b)addProduct(b.dataset.add);
-});
-$("basketItems").addEventListener("click",e=>{
-  const b=e.target.closest("[data-qty]");
-  if(b)changeQty(b.dataset.qty,Number(b.dataset.delta));
-});
+$("searchForm").addEventListener("submit",e=>{e.preventDefault();searchProducts($("search").value);});
+$("suggestions").addEventListener("click",e=>{const b=e.target.closest("[data-query]");if(!b)return;$("search").value=b.dataset.query;searchProducts(b.dataset.query);});
+$("products").addEventListener("click",e=>{const brand=e.target.closest("[data-brand]");if(brand){const b=brand.dataset.brand;$("search").value=b;searchProducts(b,b);return;}const add=e.target.closest("[data-add]");if(add)addProduct(add.dataset.add);});
+$("basketItems").addEventListener("click",e=>{const b=e.target.closest("[data-qty]");if(b)changeQty(b.dataset.qty,Number(b.dataset.delta));});
 $("compareBtn").addEventListener("click",compareBasket);
 $("locationBtn").addEventListener("click",requestLocation);
-$("refreshBtn").addEventListener("click",()=>{
-  if(productCount())compareBasket();
-  else if($("search").value.trim())searchProducts($("search").value);
-  else toast("Recherchez un produit ou ajoutez-le au panier.");
-});
-$("clearBasket").addEventListener("click",()=>{
-  if(!productCount()){toast("Le panier est déjà vide.");return;}
-  if(!confirm("Vider complètement votre panier ?"))return;
-  basket={};
-  saveBasket();
-  renderBasket();
-  toast("Panier vidé.");
-});
-$("saveBasket").addEventListener("click",()=>{
-  saveBasket();
-  toast("Panier sauvegardé sur cet appareil.");
-});
+$("refreshBtn").addEventListener("click",()=>{if(productCount())compareBasket();else if($("search").value.trim())searchProducts($("search").value);else toast("Recherche un produit ou ajoute-le au panier.");});
+$("clearBasket").addEventListener("click",()=>{if(!productCount()){toast("Le panier est déjà vide.");return;}if(!confirm("Vider complètement ton panier ?"))return;basket={};saveBasket();renderBasket();toast("Panier vidé.");});
+$("saveBasket").addEventListener("click",()=>{saveBasket();toast("Panier sauvegardé sur cet appareil.");});
 renderBasket();
+showStatus("Catalogue de produits accessible en ligne. Les prix sont recherchés par code-barres dans Open Prices ; les sites officiels des enseignes restent accessibles lorsqu’aucun tarif comparable n’est disponible.");
+
 </script>
 </body>
 </html>
