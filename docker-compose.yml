@@ -1,0 +1,14 @@
+services:
+  prixo-api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      PRIXO_ADMIN_API_KEY: "change-moi-avec-une-cle-longue"
+      PRIXO_CORS_ORIGINS: "*"
+      PRIXO_PRICE_MAX_AGE_DAYS: "90"
+      PRIXO_DATABASE_PATH: "/data/prixo.sqlite3"
+    volumes:
+      - prixo_data:/data
+volumes:
+  prixo_data:
